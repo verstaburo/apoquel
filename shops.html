@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <title>Симпарика | Где купить</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es5,es6,es7,default-3.6,Object.values&amp;flags=gated&amp;version=latest&amp;unknown=ignore"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container container_full header__container">
+            <div class="burger-button js-burger-button header__burger"><span></span></div><a class="header__logo"><img src="assets/images/logo.svg" /></a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item header__item_mobile"><a class="header__link" href="index.html">Главная</a></li>
+                    <li class="header__item"><a class="header__link" href="selection.html">Подбери дозировку</a></li>
+                    <li class="header__item"><a class="header__link" href="instruction.html">Инструкция</a></li>
+                    <li class="header__item"><a class="header__link" href="doctor.html">О чем рассказать на приеме у ветврача</a></li>
+                    <li class="header__item"><a class="header__link" href="test.html">Пройти тест</a></li>
+                    <li class="header__item"><a class="header__link" href="faq.html">Вопросы и ответы</a></li>
+                    <li class="header__item"><a class="header__link" href="articles.html">Статьи</a></li>
+                    <li class="header__item header__item_mobile"><a class="header__link" href="index.html">Дневник лечения</a></li>
+                </ul>
+                <div class="header__buttons"><a class="button button_blue header__button" href="shops.html">Где купить</a><a class="header__buttonlink" href="#">Дневник лечения</a></div>
+            </nav><a class="button header__mobilebutton" href="test.html">Где купить</a>
+        </div>
+    </div>
+    <section class="breadcrumbs breadcrumbs_blue">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Где купить</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="search">
+        <div class="container">
+            <div class="search__top">
+                <div class="search__bar"><select class="city-select js-city-select search__select">
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Воскресенск">Воскресенск</option>
+                        <option value="Долгопрудный">Долгопрудный</option>
+                        <option value="Егорьевск">Егорьевск</option>
+                        <option value="Новокуйбышевск">Новокуйбышевск</option>
+                        <option value="Раменское">Раменское</option>
+                        <option value="Реутов">Реутов</option>
+                        <option value="Самара">Самара</option>
+                        <option value="Адлер">Адлер</option>
+                        <option value="Алабино">Алабино</option>
+                        <option value="Андреевка">Андреевка</option>
+                        <option value="Апрелевка">Апрелевка</option>
+                        <option value="Ашукино">Ашукино</option>
+                        <option value="Балашиха">Балашиха</option>
+                        <option value="Бердск">Бердск</option>
+                        <option value="Быково">Быково</option>
+                        <option value="Великий Новгород">Великий Новгород</option>
+                        <option value="Видное">Видное</option>
+                        <option value="Владимир">Владимир</option>
+                        <option value="пос. ВНИИССОК">пос. ВНИИССОК</option>
+                        <option value="Волгоград">Волгоград</option>
+                        <option value="Волхов">Волхов</option>
+                        <option value="Воронеж">Воронеж</option>
+                        <option value="Всеволожск">Всеволожск</option>
+                        <option value="Выборг">Выборг</option>
+                        <option value="Гатчина">Гатчина</option>
+                        <option value="Гурьевск, Калининградская область">Гурьевск, Калининградская область</option>
+                        <option value="Дедовск">Дедовск</option>
+                        <option value="Дзержинский">Дзержинский</option>
+                        <option value="Дмитров">Дмитров</option>
+                        <option value="Домодедово">Домодедово</option>
+                        <option value="Дубна">Дубна</option>
+                        <option value="Екатеринбург">Екатеринбург</option>
+                        <option value="Железнодорожный">Железнодорожный</option>
+                        <option value="Жуковский">Жуковский</option>
+                        <option value="Заречный">Заречный</option>
+                        <option value="Звенигород">Звенигород</option>
+                        <option value="Зеленоград">Зеленоград</option>
+                        <option value="Зеленоградск, Калининградская область">Зеленоградск, Калининградская область</option>
+                        <option value="Иваново">Иваново</option>
+                        <option value="Ивантеевка">Ивантеевка</option>
+                        <option value="Икша">Икша</option>
+                        <option value="Истра">Истра</option>
+                        <option value="Казань">Казань</option>
+                        <option value="Калининград">Калининград</option>
+                        <option value="Каменск-Уральский">Каменск-Уральский</option>
+                        <option value="Кашира">Кашира</option>
+                        <option value="Кингисепп">Кингисепп</option>
+                        <option value="Кировск">Кировск</option>
+                        <option value="Климовск">Климовск</option>
+                        <option value="Клин">Клин</option>
+                        <option value="Ковров">Ковров</option>
+                        <option value="Коломна">Коломна</option>
+                        <option value="Колпино">Колпино</option>
+                        <option value="Королев">Королев</option>
+                        <option value="Кострома">Кострома</option>
+                        <option value="Котельники">Котельники</option>
+                        <option value="Красково">Красково</option>
+                        <option value="Красногорск">Красногорск</option>
+                        <option value="Краснодар">Краснодар</option>
+                        <option value="Краснознаменск">Краснознаменск</option>
+                        <option value="Кубинка">Кубинка</option>
+                        <option value="Курск">Курск</option>
+                        <option value="Ленинский район">Ленинский район</option>
+                        <option value="Липецк">Липецк</option>
+                        <option value="Лобня">Лобня</option>
+                        <option value="Ломоносов">Ломоносов</option>
+                        <option value="Луховицы">Луховицы</option>
+                        <option value="Лыткарино">Лыткарино</option>
+                        <option value="Люберцы">Люберцы</option>
+                        <option value="Магнитогорск">Магнитогорск</option>
+                        <option value="Можайск">Можайск</option>
+                        <option value="Монино">Монино</option>
+                        <option value="Мурманск">Мурманск</option>
+                        <option value="Мытищи">Мытищи</option>
+                        <option value="Мытищинский район">Мытищинский район</option>
+                        <option value="Наро-Фоминск">Наро-Фоминск</option>
+                        <option value="Наро-Фоминск">Наро-Фоминск</option>
+                        <option value="Нижний Новгород">Нижний Новгород</option>
+                        <option value="Новокузнецк">Новокузнецк</option>
+                        <option value="Новомосковск">Новомосковск</option>
+                        <option value="Новосибирск">Новосибирск</option>
+                        <option value="Новоуральск">Новоуральск</option>
+                        <option value="Ногинск">Ногинск</option>
+                        <option value="Обнинск">Обнинск</option>
+                        <option value="Обь">Обь</option>
+                        <option value="Одинцово">Одинцово</option>
+                        <option value="Одинцовский район">Одинцовский район</option>
+                        <option value="Озеры">Озеры</option>
+                        <option value="Орехово-Зуево">Орехово-Зуево</option>
+                        <option value="п. Московский">п. Московский</option>
+                        <option value="Павловская Слобода">Павловская Слобода</option>
+                        <option value="Павловский Посад">Павловский Посад</option>
+                        <option value="Первоуральск">Первоуральск</option>
+                        <option value="Пермь">Пермь</option>
+                        <option value="Петрозаводск">Петрозаводск</option>
+                        <option value="Пионерск, Калининградская область">Пионерск, Калининградская область</option>
+                        <option value="Подольск">Подольск</option>
+                        <option value="пос. Сосново">пос. Сосново</option>
+                        <option value="Правдинск">Правдинск</option>
+                        <option value="Протвино">Протвино</option>
+                        <option value="Псков">Псков</option>
+                        <option value="Пушкин">Пушкин</option>
+                        <option value="Пушкино">Пушкино</option>
+                        <option value="Пущино">Пущино</option>
+                        <option value="Ржавки">Ржавки</option>
+                        <option value="Родники">Родники</option>
+                        <option value="Ростов на Дону">Ростов на Дону</option>
+                        <option value="рп. Краснообск">рп. Краснообск</option>
+                        <option value="Рязань">Рязань</option>
+                        <option value="Сапроново">Сапроново</option>
+                        <option value="Сергиев Посад">Сергиев Посад</option>
+                        <option value="Сергиев-Посад">Сергиев-Посад</option>
+                        <option value="Серпухов">Серпухов</option>
+                        <option value="Сестрорецк">Сестрорецк</option>
+                        <option value="Советск, Калининградская область">Советск, Калининградская область</option>
+                        <option value="Солнечногорск">Солнечногорск</option>
+                        <option value="Сочи">Сочи</option>
+                        <option value="Старая Купавна">Старая Купавна</option>
+                        <option value="Ступино">Ступино</option>
+                        <option value="Сходня">Сходня</option>
+                        <option value="Тимашевск">Тимашевск</option>
+                        <option value="Тольятти">Тольятти</option>
+                        <option value="Томилино">Томилино</option>
+                        <option value="Томск">Томск</option>
+                        <option value="Тула">Тула</option>
+                        <option value="Тюмень">Тюмень</option>
+                        <option value="Фрязино">Фрязино</option>
+                        <option value="Химки">Химки</option>
+                        <option value="Чапаевск">Чапаевск</option>
+                        <option value="Чебаркуль">Чебаркуль</option>
+                        <option value="Челябинск">Челябинск</option>
+                        <option value="Чехов">Чехов</option>
+                        <option value="Чкаловск, Калининградская область">Чкаловск, Калининградская область</option>
+                        <option value="Чусовой">Чусовой</option>
+                        <option value="Щёлково">Щёлково</option>
+                        <option value="Щелково">Щелково</option>
+                        <option value="Щербинка">Щербинка</option>
+                        <option value="Электросталь">Электросталь</option>
+                        <option value="Южный Город - 1">Южный Город - 1</option>
+                        <option value="Ярославль">Ярославль</option>
+                        <option value="Яхрома">Яхрома</option>
+                    </select></div><label class="switcher search__switcher js-map-switch">
+                    <p class="switcher__text">списком</p><input class="switcher__input js-switcher" type="checkbox" /><span class="switcher__box"><span class="switcher__mover"><span class="switcher__circle"></span></span></span>
+                    <p class="switcher__text">на карте</p>
+                </label>
+            </div>
+            <div class="search__filters"><label class="zoo-radio zoo-radio_zoo search__filter"><input class="zoo-radio__input" name="searchRadio" value="1" checked="checked" type="checkbox" /><span class="zoo-radio__box"></span><span class="zoo-radio__content">Ветаптеки и зоомагазины</span></label><label class="zoo-radio zoo-radio_plus search__filter"><input class="zoo-radio__input" name="searchRadio" value="2" checked="checked" type="checkbox" /><span class="zoo-radio__box"></span><span class="zoo-radio__content">Клиники</span></label><label class="zoo-radio zoo-radio_man search__filter"><input class="zoo-radio__input" name="searchRadio" value="3" type="checkbox" /><span class="zoo-radio__box"></span><span class="zoo-radio__content">Дистрибьюторы</span></label></div>
+            <ul class="tabs search__tabs">
+                <li class="tabs__tab is-active" data-tab-target="shops">Показать списком</li>
+                <li class="tabs__tab" data-tab-target="map">Показать карту</li>
+            </ul>
+        </div>
+    </div>
+    <div class="tabs-content">
+        <div class="tabs-content__wrapper is-active" data-tab="shops" data-tab-group="shop-list">
+            <section class="section section_shops">
+                <div class="container">
+                    <div class="shops">
+                        <div class="shops__row shops__row_head">
+                            <div class="shops__col shops__col_logo"></div>
+                            <div class="shops__col shops__col_name"></div>
+                            <div class="shops__col shops__col_site">
+                                <p class="shops__title">Сайт</p>
+                            </div>
+                            <div class="shops__col shops__col_phone">
+                                <p class="shops__title">Телефон</p>
+                            </div>
+                            <div class="shops__col shops__col_button">
+                                <p class="shops__title">Показать адреса</p>
+                            </div>
+                        </div>
+                        <div class="shops__items"></div>
+                        <p class="shops__noresults">К сожалению, результаты по выбранным фильтрам отсутствуют</p>
+                        <p class="shops__additional">Полный список зоомагазинов и вет-клиник в городе <span class="js-city-name">Москва</span>, где можно купить Симпарику по выгодным ценам.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="tabs-content__wrapper" data-tab="map" data-tab-group="shop-list">
+            <div class="map" id="map"></div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/choices.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=46854465-9d52-4498-bc10-a38e12f746cd&amp;lang=ru_RU" type="text/javascript"></script>
+    <div class="footer">
+        <div class="footer__bottom">
+            <div class="container container_flex">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col_info">
+                        <div class="footer__info"><span class="footer__field">E-mail:</span><a class="footer__value" href="mailto:russia@zoetis.ru">russia@zoetis.ru</a></div>
+                        <div class="footer__info"><span class="footer__field">Телефон:</span><a class="footer__value" href="tel: +7 (499) 922 30 22">+7 (499) 922 30 22</a></div><a class="footer__logolink footer__logolink_mobile" href="#">www.zoetis.ru</a>
+                    </div>
+                    <div class="footer__col footer__col_text">
+                        <p>Московское представительство<br> ООО Зоэтис</p>
+                        <p>123112, Москва, Пресненская наб., д. 10, блок С, БЦ «Башня на Набережной»</p>
+                    </div>
+                    <div class="footer__col footer__col_text footer__col footer__col_text_right">
+                        <p>©2018 Zoetis Services LLC. Все товарные знаки являются собственностью Zoetis Services LLC, филиалов и/или лицензиаров Zoetis Services LLC. 580981.</p>
+                    </div>
+                    <div class="footer__col footer__col_logo"><a class="footer__logo"><img src="assets/images/zoetis.svg" /></a><a class="footer__logolink" href="#">www.zoetis.ru</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__top">
+            <div class="container footer__warning-wrap">
+                <div class="footer__warning"><img src="assets/images/warning_1.svg" /><img src="assets/images/warning_2.svg" /><img src="assets/images/warning_3.svg" /></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

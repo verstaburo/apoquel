@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <title>Симпарика | Тест</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es5,es6,es7,default-3.6,Object.values&amp;flags=gated&amp;version=latest&amp;unknown=ignore"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container container_full header__container">
+            <div class="burger-button js-burger-button header__burger"><span></span></div><a class="header__logo"><img src="assets/images/logo.svg" /></a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item header__item_mobile"><a class="header__link" href="index.html">Главная</a></li>
+                    <li class="header__item"><a class="header__link" href="selection.html">Подбери дозировку</a></li>
+                    <li class="header__item"><a class="header__link is-active" href="instruction.html">Инструкция</a></li>
+                    <li class="header__item"><a class="header__link" href="doctor.html">О чем рассказать на приеме у ветврача</a></li>
+                    <li class="header__item"><a class="header__link" href="test.html">Пройти тест</a></li>
+                    <li class="header__item"><a class="header__link" href="faq.html">Вопросы и ответы</a></li>
+                    <li class="header__item"><a class="header__link" href="articles.html">Статьи</a></li>
+                    <li class="header__item header__item_mobile"><a class="header__link" href="index.html">Дневник лечения</a></li>
+                </ul>
+                <div class="header__buttons"><a class="button header__button" href="shops.html">Где купить</a><a class="header__buttonlink" href="#">Дневник лечения</a></div>
+            </nav><a class="button button_blue header__mobilebutton" href="test.html">Где купить</a>
+        </div>
+    </div>
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Тест</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="section section_padding_two">
+        <div class="container">
+            <div class="section__header section__header_width_one section__header_line_one">
+                <h2 class="section__title">Пройдите тест и узнайте, как защитить вашу собаку от наружных паразитов!</h2>
+            </div>
+            <div class="section__content section__content_margin_one">
+                <div class="test">
+                    <div class="test__info">
+                        <div class="test__counter"></div>
+                        <div class="test__progressbar"><span></span></div>
+                    </div>
+                    <form class="test__form" action="#" method="post">
+                        <div class="test__bg"><span></span><span></span></div>
+                        <div class="slider swiper-container test__slider js-test-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">1. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[0]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[0]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[0]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[0]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">2. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[1]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[1]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[1]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[1]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[1]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">3. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[2]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[2]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[2]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">4. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[3]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[3]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[3]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[3]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">5. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[4]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[4]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[4]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[4]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">6. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[5]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[5]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[5]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[5]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">7. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[6]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[6]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[6]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[6]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">8. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[7]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[7]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[7]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[7]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">9. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[8]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[8]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[8]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[8]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="test-item">
+                                        <h2 class="test-item__heading">10. В природе существуют безвредные клещи…</h2>
+                                        <div class="test-item__options"><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[9]" value="Таких клещей нет, они все очень больно кусаются" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Таких клещей нет, они все очень больно кусаются</span></label><label class="checkradio test-item__radio is-right"><input class="checkradio__input" name="testAnswer[9]" value="У каждого клеща обязательно есть яд, укус не пройдет просто так" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">У каждого клеща обязательно есть яд, укус не пройдет просто так</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[9]" value="Все клещи в душе пацифисты, они рады мирно жить со своим хозяином" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Все клещи в душе пацифисты, они рады мирно жить со своим хозяином</span></label><label class="checkradio test-item__radio"><input class="checkradio__input" name="testAnswer[9]" value="Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Есть относительно безвредные клещи, а есть иксодовые клещи. Они переносят опасные заболевания, например, боррелиоз</span></label></div>
+                                        <div class="test-item__footer"><a class="button test-item__button js-test-next" type="button" disabled="disabled">Дальше</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="footer__bottom">
+            <div class="container container_flex">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col_info">
+                        <div class="footer__info"><span class="footer__field">E-mail:</span><a class="footer__value" href="mailto:russia@zoetis.ru">russia@zoetis.ru</a></div>
+                        <div class="footer__info"><span class="footer__field">Телефон:</span><a class="footer__value" href="tel: +7 (499) 922 30 22">+7 (499) 922 30 22</a></div><a class="footer__logolink footer__logolink_mobile" href="#">www.zoetis.ru</a>
+                    </div>
+                    <div class="footer__col footer__col_text">
+                        <p>Московское представительство<br> ООО Зоэтис</p>
+                        <p>123112, Москва, Пресненская наб., д. 10, блок С, БЦ «Башня на Набережной»</p>
+                    </div>
+                    <div class="footer__col footer__col_text footer__col footer__col_text_right">
+                        <p>©2018 Zoetis Services LLC. Все товарные знаки являются собственностью Zoetis Services LLC, филиалов и/или лицензиаров Zoetis Services LLC. 580981.</p>
+                    </div>
+                    <div class="footer__col footer__col_logo"><a class="footer__logo"><img src="assets/images/zoetis.svg" /></a><a class="footer__logolink" href="#">www.zoetis.ru</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__top">
+            <div class="container footer__warning-wrap">
+                <div class="footer__warning"><img src="assets/images/warning_1.svg" /><img src="assets/images/warning_2.svg" /><img src="assets/images/warning_3.svg" /></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

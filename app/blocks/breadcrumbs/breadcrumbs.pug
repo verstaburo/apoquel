@@ -1,7 +1,0 @@
-mixin breadcrumbs(json)
-  +b.SECTION.breadcrumbs&attributes(attributes)
-    .container
-      +e.UL.list
-        each crumb in json
-          +e.LI.item
-            +e.A.link(href="#")!= crumb
