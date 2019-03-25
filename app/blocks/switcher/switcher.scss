@@ -10,10 +10,14 @@ $padding: $height/2;
   $b: &;
 
   &__text {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 
     @include screen('lg') {
+      font-size: 16px;
+    }
+
+    @include screen('sm') {
       font-size: 14px;
     }
 
@@ -30,11 +34,11 @@ $padding: $height/2;
     border: 2px solid white;
     transition: border-color $ease-main;
     width: $width;
-    margin: 0 8px;
+    margin: 0 13px;
     display: block;
 
     @include screen('lg') {
-      margin: 0 20px;
+      margin: 0 8px;
       width: 44px;
       padding: 0 9px;
     }
@@ -64,7 +68,7 @@ $padding: $height/2;
   &__circle {
     width: $circle;
     height: $circle;
-    background-color: $color-yellow;
+    background-color: $color-red;
     display: block;
     position: absolute;
     left: 50%;

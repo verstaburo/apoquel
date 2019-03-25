@@ -9,12 +9,12 @@
     flex-wrap: wrap;
 
     &_head {
-      padding-bottom: 8px;
+      padding-bottom: 5px;
       align-items: flex-end;
       border-bottom: 1px solid rgba($color-grey-light-4, .3);
 
       @include screen('lg') {
-        padding-bottom: 15px;
+        padding-bottom: 7px;
       }
 
       @include screen('sm') {
@@ -44,6 +44,10 @@
     min-height: 1px;
     position: relative;
 
+    .shops__row_head & {
+      height: auto !important;
+    }
+
     @include screen('lg') {
       padding: 0 10px;
     }
@@ -62,15 +66,19 @@
 
     &_logo {
       text-align: center;
-      width: 110px;
+      width: 120px;
+      height: 45px;
+      position: relative;
 
       @include screen('lg') {
-        width: 106px;
+        width: 113px;
+        height: 48px;
       }
 
       @include screen('sm') {
         width: 64px;
         margin-right: 5px;
+        height: 40px;
       }
     }
 
@@ -78,7 +86,7 @@
       width: 22.8%;
 
       @include screen('lg') {
-        width: 19.7%;
+        width: 17.7%;
       }
 
       @include screen('sm') {
@@ -88,7 +96,7 @@
     }
 
     &_site {
-      width: 20.4%;
+      width: 22.7%;
 
       @include screen('sm') {
         display: none;
@@ -100,7 +108,7 @@
       width: 13.6%;
 
       @include screen('lg') {
-        width: 17.3%;
+        width: 18.5%;
       }
 
       @include screen('sm') {
@@ -120,8 +128,9 @@
   }
 
   &__title {
-    color: $color-grey-light-5;
-    font-size: 14px;
+    color: $color-grey;
+    font-size: 18px;
+    font-weight: 600;
 
     @include screen('lg') {
       font-size: 12px;
@@ -130,15 +139,9 @@
 
   &__logo {
     max-width: 100%;
-    max-height: 68px;
+    max-height: 100%;
 
-    @include screen('lg') {
-      max-height: 64px;
-    }
-
-    @include screen('sm') {
-      max-height: 40px;
-    }
+    @include center-image;
   }
 
   &__items {
@@ -147,11 +150,14 @@
 
   &__name {
     font-family: $font-second;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-grey;
+    padding-left: 40px;
 
     @include screen('lg') {
       font-size: 15px;
+      padding-left: 0;
     }
 
     @include screen('sm') {
@@ -174,7 +180,7 @@
       top: 100%;
       margin-top: 3px;
       border-radius: 100px;
-      border: 2px solid $color-main;
+      border: 2px solid $color-red;
       background-color: white;
       z-index: 1;
       white-space: nowrap;
@@ -195,7 +201,7 @@
         height: 0;
         border-style: solid;
         border-width: 0 0 7px 5px;
-        border-color: transparent transparent $color-main transparent;
+        border-color: transparent transparent $color-red transparent;
         position: absolute;
         bottom: 100%;
         right: 56px;
@@ -205,13 +211,13 @@
   }
 
   &__link {
-    font-size: 16px;
+    font-size: 18px;
     color: $color-green-dark;
     transition: opacity $ease-main;
     line-height: 1.2;
 
     @include screen('lg') {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     @include screen('sm') {
@@ -230,7 +236,7 @@
   }
 
   &__phone {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.2;
     color: inherit;
@@ -311,7 +317,7 @@
   }
 
   &__adresses {
-    padding: 40px 0 30px 119px;
+    padding: 30px 0 7px 44px;
     font-size: 0;
     display: none;
 
@@ -329,7 +335,7 @@
   }
 
   &__adress {
-    font-size: 16px;
+    font-size: 18px;
     padding: 22px 35px 0;
     box-sizing: border-box;
     width: 33.333%;
@@ -337,7 +343,7 @@
 
     @include screen('lg') {
       width: 50%;
-      font-size: 14px;
+      font-size: 12px;
       padding-top: 24px;
     }
 
@@ -357,15 +363,17 @@
     font-weight: 600;
     color: $color-grey-light-6;
     line-height: 1.2;
-    margin-top: 96px;
+    margin-top: 34px;
 
     @include screen('lg') {
-      margin-top: 80px;
+      margin-top: 16px;
+      font-size: 8px;
     }
 
     @include screen('sm') {
-      font-size: 9px;
-      margin-top: 40px;
+      font-size: 8px;
+      line-height: normal;
+      margin-top: 8px;
     }
   }
 

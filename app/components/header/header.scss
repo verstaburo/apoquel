@@ -1,11 +1,20 @@
 .header {
   display: block;
   padding: 19px 0 20px;
-  background-color: $color-main;
-  color: white;
-  font-family: $font-second;
+  background-color: white;
   position: relative;
   z-index: 100;
+  border-bottom: 3px solid $color-red;
+  font-weight: 600;
+
+  @include screen('lg') {
+    border-bottom-width: 1px;
+    padding: 8px 0;
+  }
+
+  @include screen('sm') {
+    padding: 13px 0 12px;
+  }
 
   &.is-fixed {
     position: fixed;
@@ -17,55 +26,48 @@
 
   $b: &;
 
-  @include screen('lg') {
-    padding: 8px 0;
-  }
-
-  @include screen('sm') {
-    padding: 16px 0;
-  }
-
   &__container {
     display: flex;
     align-items: center;
   }
 
   &__logo {
-    margin-left: -55px;
-    margin-top: 6px;
+    margin-top: -16px;
 
     @include screen('lg') {
-      margin-left: 0;
-      margin-top: 0;
-      position: relative;
-      top: 2px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      width: 144px;
+      height: 54px;
     }
 
     @include screen('sm') {
-      top: 4px;
+      height: 36px;
+      width: 89px;
     }
 
     img {
-      width: 298px;
-
-      @include screen('xl') {
-        width: 180px;
-      }
+      width: 204px;
 
       @include screen('lg') {
-        width: 192px;
+        width: 144px;
       }
 
       @include screen('sm') {
-        width: 98px;
+        width: 89px;
       }
     }
   }
 
   &__nav {
     align-items: center;
-    padding-left: 40px;
+    padding-left: 102px;
     margin-left: auto;
+    flex: 1;
 
     @include screen('lg', min) {
       display: flex !important;
@@ -74,11 +76,11 @@
     @include screen('lg') {
       display: none;
       position: absolute;
-      top: 100%;
+      top: calc(100% + 1px);
       left: 0;
       width: 100%;
       color: $color-grey;
-      height: calc(100vh - 100%);
+      height: calc(100vh - 100% - 1px);
       overflow: auto;
       padding: 30px 18px;
       background-color: rgba(white, .96);
@@ -102,25 +104,37 @@
   }
 
   &__menu {
+    margin-right: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 120px;
+    justify-content: center;
 
     @include screen('lg') {
       display: block;
+      height: auto;
+      margin-right: 0;
     }
   }
 
   &__item {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 83px;
+
     @include screen('lg') {
-      margin-bottom: 24px;
+      margin-bottom: 31px;
+      margin-top: 0;
+      margin-right: 0;
     }
 
     @include screen('sm') {
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
     &_mobile {
-      @include screen('sm', min) {
+      @include screen('lg', min) {
         display: none;
       }
     }
@@ -131,30 +145,17 @@
     font-size: 18px;
     line-height: normal;
     transition: opacity $ease-main;
-    border-radius: 100px;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 32px;
     display: block;
 
     &.is-active {
-      background-color: $color-blue;
+      color: $color-red;
       pointer-events: none;
-
-      @include screen('lg') {
-        background-color: transparent;
-        color: $color-blue;
-      }
     }
 
     &:hover {
       opacity: .5;
     }
 
-    @include screen('xl') {
-      padding: 0 29px;
-    }
-
     @include screen('lg') {
       font-size: 35px;
       font-weight: 500;
@@ -164,26 +165,31 @@
     }
 
     @include screen('sm') {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 
-  &__button {
-    margin-left: 27px;
+  &__buttons {
+    display: block;
+    padding-bottom: 7px;
 
     @include screen('lg') {
-      background-color: transparent;
-      line-height: normal;
-      font-size: 35px;
-      color: inherit;
-      font-weight: 500;
-      padding: 0;
-      height: auto;
-      margin-left: 0;
+      display: none;
     }
+  }
 
-    @include screen('sm') {
-      font-size: 20px;
+  &__buttonlink {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    color: $color-main;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: opacity $ease-main;
+
+    &:hover {
+      opacity: .5;
     }
   }
 
@@ -196,13 +202,6 @@
   }
 
   &__burger {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-
     @include screen('lg', min) {
       display: none;
     }

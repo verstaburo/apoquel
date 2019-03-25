@@ -18,10 +18,10 @@
   }
 
   &_shops {
-    padding: 52px 0 24px;
+    padding: 21px 0 51px;
 
     @include screen('lg') {
-      padding-top: 17px;
+      padding-top: 11px;
     }
 
     @include screen('sm') {
@@ -39,17 +39,17 @@
   &_padding {
 
     &_one {
-      padding-top: 39px;
+      padding-top: 22px;
       padding-bottom: 123px;
 
       @include screen('lg') {
-        padding-top: 36px;
+        padding-top: 49px;
         padding-bottom: 79px;
       }
 
       @include screen('sm') {
         padding-top: 32px;
-        padding-bottom: 16px;
+        padding-bottom: 24px;
       }
     }
 
@@ -127,13 +127,14 @@
 
   &__title {
     font-family: $font-second;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.5;
-    color: $color-blue-dark;
+    color: $color-grey;
     text-align: center;
+    font-weight: 900;
 
     @include screen('lg') {
-      font-size: 30px;
+      font-size: 25px;
     }
 
     @include screen('sm') {
@@ -229,14 +230,14 @@
       &_four {
 
         &:not(:first-child) {
-          margin-top: 58px;
+          margin-top: 28px;
 
           @include screen('lg') {
-            margin-top: 21px;
+            margin-top: 12px;
           }
 
           @include screen('sm') {
-            margin-top: 16px;
+            margin-top: 10px;
           }
         }
       }
@@ -308,6 +309,30 @@
       @include screen('sm') {
         margin-top: 16px;
       }
+    }
+  }
+
+  &__info-blocks {
+    margin-top: 55px;
+
+    @include screen('lg') {
+      margin-top: 44px;
+    }
+
+    @include screen('sm') {
+      margin-top: 29px;
+    }
+  }
+
+  &__button {
+    margin-top: 22px;
+
+    @include screen('lg') {
+      margin-top: 16px;
+    }
+
+    @include screen('sm') {
+      margin-top: 11px;
     }
   }
 }

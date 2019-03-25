@@ -12,18 +12,27 @@ mixin header(index)
 
   +b.header&attributes(attributes)
     .container.container_full.header__container
+      +burger-button.__burger
+
       +e.A.logo
         img(src="assets/images/logo.svg")
+
       +e.NAV.nav
         +e.UL.menu
           +e.LI.item._mobile
             +e.A.link(href="index.html") Главная
+
           each link in getData('menu')
             - activeClass = n === index ? 'is-active' : '';
             +e.LI.item
               +e.A.link(href=link[1] class=activeClass)!= link[0]
             - n++;
 
-        +button()(href="shops.html" class=buttonActiveClass).__button Где купить
-      +burger-button.__burger
-      +button()(href="test.html" class=buttonActiveClassTwo).__mobilebutton Пройти тест
+          +e.LI.item._mobile
+            +e.A.link(href="index.html") Дневник лечения
+
+        +e.buttons
+          +button()(href="shops.html" class=buttonActiveClass).__button Где купить
+          +e.A.buttonlink(href="#") Дневник лечения
+
+      +button()(href="test.html" class=buttonActiveClassTwo).__mobilebutton Где купить

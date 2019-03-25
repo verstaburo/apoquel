@@ -5,17 +5,16 @@
   &__tab {
     display: inline-block;
     margin-right: 23px;
-    padding-top: 14px;
     border-bottom: 2px solid transparent;
     transition: border-color $ease-main, color $ease-main;
-    padding-bottom: 15px;
     cursor: pointer;
     font-size: 12px;
     font-weight: 600;
     color: rgba(white, .5);
+    padding: 14px 4px 12px;
 
     &.is-active {
-      border-color: $color-yellow;
+      border-color: $color-red;
       color: white;
     }
   }

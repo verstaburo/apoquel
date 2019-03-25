@@ -1,19 +1,26 @@
 .breadcrumbs {
   display: block;
-  padding: 18px 0;
+  padding: 5px 0;
   position: relative;
   z-index: 2;
 
   $b: &;
 
-  @include screen('lg') {
+  @include screen('sm') {
     display: none;
   }
 
   &_blue {
-    box-shadow: 0 1px 0 0 rgba(white, .36) inset;
-    padding: 15px 0;
-    background-color: $color-main;
+    padding: 3px 0;
+    background-color: $color-blue-2;
+
+    @include screen('lg') {
+      padding: 2px 0;
+
+      .breadcrumbs__item {
+        font-size: 10px;
+      }
+    }
   }
 
   &_grey {
@@ -25,7 +32,7 @@
   }
 
   &__link {
-    color: black;
+    color: $color-grey-3;
     transition: color $ease-main;
 
     #{$b}_blue & {
@@ -44,8 +51,12 @@
   &__item {
     display: inline-block;
     position: relative;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.2;
+
+    @include screen('lg') {
+      font-size: 8px;
+    }
 
     &:not(:last-child) {
       margin-right: 3px;

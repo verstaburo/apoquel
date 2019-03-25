@@ -1,21 +1,20 @@
 .search {
   display: block;
   color: white;
-  background-color: $color-main;
-  padding: 30px 0 34px;
+  background-color: $color-blue-2;
+  padding: 24px 0 34px;
 
   $b: &;
 
   @include screen('lg') {
-    padding-top: 14px;
-    padding-bottom: 28px;
-    border-top: 1px solid white;
+    padding-top: 20px;
+    padding-bottom: 27px;
+    border-top: none;
   }
 
   @include screen('sm') {
     padding-top: 12px;
     padding-bottom: 0;
-    border-top: none;
   }
 
   &__top {
@@ -25,7 +24,7 @@
 
   &__bar {
     flex: 1;
-    padding-left: 59px;
+    padding-left: 54px;
     margin-right: 40px;
     position: relative;
 
@@ -86,26 +85,26 @@
   }
 
   &__filters {
-    margin-top: 28px;
+    margin-top: 38px;
     border-top: 1px solid white;
     display: flex;
     flex-wrap: wrap;
 
     @include screen('lg') {
-      margin-top: 6px;
+      margin-top: -1px;
     }
 
     @include screen('sm') {
-      margin-top: 9px;
+      margin-top: 11px;
       justify-content: space-between;
     }
   }
 
   &__filter {
-    margin: 26px 60px 0 0;
+    margin: 34px 40px 0 0;
 
     @include screen('lg') {
-      margin: 28px 20px 0 0;
+      margin: 13px 34px 0 0;
     }
 
     @include screen('sm') {

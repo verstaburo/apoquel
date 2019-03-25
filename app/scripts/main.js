@@ -115,8 +115,8 @@ function shopPage () {
     }, {
       iconLayout: 'default#imageWithContent',
       iconImageHref: image,
-      iconImageSize: [46, 60],
-      iconImageOffset: [-23, -60],
+      iconImageSize: [30, 38],
+      iconImageOffset: [-15, -38],
       iconContentOffset: [15, 15],
     });
   }

@@ -29,7 +29,7 @@
     border: 2px solid white;
     border-radius: 10px;
     box-sizing: border-box;
-    margin-right: 20px;
+    margin-right: 15px;
     position: relative;
 
     @include screen('lg') {
@@ -86,13 +86,13 @@
   }
 
   &__content {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 700;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
 
     @include screen('lg') {
-      font-size: 14px;
+      font-size: 16px;
       padding-bottom: 0;
     }
 

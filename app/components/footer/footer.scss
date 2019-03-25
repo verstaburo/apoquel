@@ -1,6 +1,6 @@
 .footer {
   display: block;
-  color: white;
+  color: $color-grey-3;
   margin-top: auto;
 
   $b: &;
@@ -11,8 +11,8 @@
   }
 
   &__top {
-    background-color: rgba($color-main, .9);
-    padding: 14px 0 9px;
+    background-color: $color-grey-3;
+    padding: 20px 0 13px;
     width: 100%;
 
     &.is-fixed {
@@ -25,11 +25,11 @@
     }
 
     @include screen('lg') {
-      order: 1000;
+      padding: 10px 0 5px;
     }
 
     @include screen('sm') {
-      padding: 7px 0;
+      padding: 5px 0 3px;
     }
   }
 
@@ -40,17 +40,18 @@
   }
 
   &__bottom {
-    background-color: $color-main;
-    padding: 17px 0 18px;
+    background-color: $color-blue-1;
+    padding: 27px 0 42px;
 
     @include screen('lg') {
       padding-top: 10px;
-      padding-bottom: 30px;
+      padding-bottom: 23px;
     }
 
     @include screen('sm') {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      width: 100%;
     }
   }
 
@@ -99,13 +100,12 @@
 
   &__grid {
     display: flex;
-    align-items: center;
     margin: 0 -30px;
     flex-wrap: wrap;
     position: relative;
 
     @include screen('lg') {
-      margin: 0 20px;
+      margin: 0 -19px;
     }
 
     @include screen('sm') {
@@ -119,7 +119,7 @@
     box-sizing: border-box;
 
     @include screen('lg') {
-      padding: 18px 19px 0;
+      padding: 11px 19px 0;
     }
 
     @include screen('sm') {
@@ -129,47 +129,77 @@
     }
 
     &_info {
-      width: 25.1%;
-      font-size: 16px;
-      font-weight: 700;
+      width: 27.9%;
+      font-size: 14px;
+      font-weight: 500;
       line-height: 1.2;
 
       @include screen('lg') {
         order: 0;
         width: 50%;
         margin-top: 3px;
-      }
-
-      @include screen('sm') {
-        font-size: 10px;
-        margin-top: 0;
-        line-height: 2;
-      }
-    }
-
-    &_text {
-      width: 28%;
-      font-size: 14px;
-      line-height: 1.43;
-
-      @include screen('lg') {
-        order: 2;
-        width: 50%;
         font-size: 12px;
         line-height: 1.67;
       }
 
       @include screen('sm') {
         font-size: 10px;
+        margin-top: 0;
         line-height: 2;
+        margin-bottom: 23px;
+      }
+    }
+
+    &_text {
+      width: 28.6%;
+      font-size: 14px;
+      line-height: 1.43;
+      font-weight: 500;
+
+      @include screen('lg') {
+        order: 2;
+        width: 50%;
+        font-size: 12px;
+        line-height: 1.5;
+
+        br { display: none; }
+      }
+
+      @include screen('sm') {
+        font-size: 8px;
+        line-height: 1.5;
       }
 
       p {
 
         &:not(:first-child) {
+          @include screen('lg', min) {
+            margin-top: 8px;
+          }
+
           @include screen('sm', min) {
             margin-top: 5px;
           }
+        }
+      }
+
+      &_right {
+        @include screen('lg') {
+          font-size: 10px;
+          line-height: 1.4;
+          color: $color-silver;
+          text-align: right;
+          max-width: 340px;
+          margin-left: auto;
+          margin-top: 3px;
+        }
+
+        @include screen('sm') {
+          max-width: none;
+          text-align: left;
+          font-size: 8px;
+          line-height: 1.5;
+          margin-top: 10px;
         }
       }
     }
@@ -177,11 +207,11 @@
     &_logo {
       margin-left: auto;
       align-self: flex-start;
+      text-align: right;
 
       @include screen('lg') {
         order: 1;
         width: 50%;
-        text-align: right;
       }
 
       @include screen('sm') {
@@ -197,35 +227,67 @@
     display: block;
 
     &:not(:first-child) {
-      margin-top: 3px;
+      margin-top: 24px;
 
-      @include screen('sm') {
-        margin-top: 2px;
+      @include screen('lg') {
+        margin-top: 0;
       }
     }
   }
 
   &__field {
-    margin-right: 3px;
+    margin-right: 8px;
     display: inline;
+    font-weight: 600;
+
+    @include screen('lg') {
+      margin-right: 13px;
+    }
   }
 
   &__value {
-    color: $color-blue-light;
+    color: $color-main;
     display: inline;
+    font-size: 18px;
+    font-weight: 500;
+
+    @include screen('sm') {
+      font-size: 10px;
+    }
   }
 
-  &__website {
+  &__logolink {
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-main;
+    transition: opacity $ease-main;
     margin-top: 7px;
-    color: $color-blue-light;
-    display: inline-block;
+    display: block;
+    text-align: right;
 
     @include screen('lg') {
-      margin-top: 22px;
+      font-size: 16px;
+      margin-top: 6px;
     }
 
     @include screen('sm') {
-      margin-top: 2px;
+      display: none;
+      text-align: left;
+      font-size: 10px;
+      line-height: 1.2;
+      margin-top: 4px;
+    }
+
+    &_mobile {
+      display: none;
+
+      @include screen('sm') {
+        display: block;
+      }
+    }
+
+    &:hover {
+      opacity: .5;
     }
   }
 
@@ -233,15 +295,23 @@
     display: inline-block;
     pointer-events: all;
 
+    @include screen('lg') {
+      margin-top: 11px;
+    }
+
+    @include screen('sm') {
+      margin-top: -4px;
+    }
+
     img {
-      width: 127px;
+      width: 71px;
 
       @include screen('lg') {
-        width: 80px;
+        width: 61px;
       }
 
       @include screen('sm') {
-        width: 40px;
+        width: 47px;
       }
     }
   }
