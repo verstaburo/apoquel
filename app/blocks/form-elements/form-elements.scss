@@ -26,7 +26,7 @@
 
 .checkradio {
   position: relative;
-  padding-left: 52px;
+  padding-left: 38px;
   display: inline-block;
   cursor: pointer;
   color: $color-grey;
@@ -41,7 +41,7 @@
   }
 
   &_right {
-    color: $color-green-3;
+    color: $color-blue-3;
   }
 
   $b: &;
@@ -51,7 +51,7 @@
   }
 
   @include screen('sm') {
-    padding-left: 20px;
+    padding-left: 24px;
   }
 
   &__input {
@@ -71,8 +71,8 @@
 
   &__box {
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
     border: 3px solid $color-grey;
     left: 0;
     top: 5px;
@@ -84,13 +84,13 @@
     }
 
     #{$b}_right & {
-      border-color: $color-green-2;
+      border-color: $color-blue-3;
     }
 
     @include screen('lg') {
       border-width: 2px;
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       left: 0;
       top: 0;
       bottom: 0;
@@ -98,10 +98,7 @@
     }
 
     @include screen('sm') {
-      width: 8px;
-      height: 8px;
-      bottom: auto;
-      top: 5px;
+      top: 1px;
     }
 
     &::before {
@@ -116,13 +113,13 @@
       border-radius: 100px;
 
       @include screen('lg') {
-        width: 6px;
-        height: 6px;
+        width: 10px;
+        height: 10px;
       }
 
       @include screen('sm') {
-        width: 4px;
-        height: 4px;
+        width: 10px;
+        height: 10px;
       }
 
       @include center-image;
@@ -133,13 +130,14 @@
     }
 
     #{$b}_right &::before {
-      background-color: $color-green-2;
+      background-color: $color-blue-3;
     }
   }
 
   &__content {
     font-size: 18px;
     line-height: 1.67;
+    font-weight: 500;
 
     @include screen('lg') {
       font-size: 14px;
@@ -148,7 +146,11 @@
 
     @include screen('sm') {
       font-size: 12px;
-      line-height: 1.6;
+      line-height: 1.5;
+    }
+
+    #{$b}_right &, #{$b}_wrong & {
+      font-weight: 600;
     }
   }
 }

@@ -1,16 +1,22 @@
 .article-card {
   display: block;
-  padding: 35px 55px 45px 35px;
-  border-radius: 15px;
-  background-color: rgba($color-yellow-3, .2);
+  padding: 40px 130px 40px 42px;
   transition: opacity $ease-main;
+  box-shadow: 0 0 0 3px $color-blue-4 inset;
+  border-radius: 12px;
+  min-height: 337px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 
   @include screen('lg') {
-    padding: 29px 24px 64px;
+    padding: 49px 16px 145px 24px;
   }
 
   @include screen('sm') {
-    padding: 21px 24px 38px;
+    padding: 20px 16px 145px 16px;
+    min-height: 330px;
   }
 
   &:hover {
@@ -20,57 +26,446 @@
   $b: &;
 
   &_color {
+    &_1 {
+      box-shadow: 0 0 0 3px $color-green-dark inset;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $color-green-dark;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 300px;
+        height: 79px;
+        border-radius: 50%;
+        left: -159px;
+        top: -50px;
+
+        @include screen('lg') {
+          width: 150px;
+          height: 79px;
+          border-radius: 50%;
+          left: -36px;
+          top: -50px;
+        }
+
+        @include screen('sm') {
+          width: 150px;
+          height: 79px;
+          border-radius: 50%;
+          left: -59px;
+          top: -67px;
+        }
+      }
+
+      &::after {
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        right: -176px;
+        bottom: -210px;
+
+        @include screen('lg') {
+          width: 311px;
+          height: 300px;
+          border-radius: 50%;
+          right: -107px;
+          bottom: -223px;
+        }
+
+        @include screen('sm') {
+          width: 311px;
+          height: 300px;
+          border-radius: 50%;
+          right: auto;
+          bottom: -246px;
+          left: -100px;
+        }
+      }
+    }
 
     &_2 {
-      background-color: rgba($color-orange, .2);
+      box-shadow: 0 0 0 3px $color-blue-4 inset;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $color-blue-4;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 251px;
+        height: 202px;
+        border-radius: 50%;
+        left: -165px;
+        top: -143px;
+
+        @include screen('lg') {
+          width: 251px;
+          height: 202px;
+          border-radius: 50%;
+          left: -211px;
+          top: -107px;
+        }
+
+        @include screen('sm') {
+          width: 251px;
+          height: 202px;
+          border-radius: 50%;
+          left: auto;
+          top: -144px;
+          right: -192px;
+        }
+      }
+
+      &::after {
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        right: -201px;
+        bottom: -211px;
+
+        @include screen('lg') {
+          right: -223px;
+        }
+
+        @include screen('sm') {
+          width: 279px;
+          height: 300px;
+          border-radius: 50%;
+          right: auto;
+          bottom: -232px;
+          left: -97px;
+        }
+      }
     }
 
     &_3 {
-      background-color: $color-green-4;
+      box-shadow: 0 0 0 3px $color-blue-2 inset;
+
+      &::before, &::after, #{$b}__circle {
+        content: '';
+        position: absolute;
+        background-color: $color-blue-2;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 251px;
+        height: 267px;
+        border-radius: 50%;
+        left: -211px;
+        top: -169px;
+
+        @include screen('lg') {
+          top: -179px;
+        }
+
+        @include screen('sm') {
+          width: 216px;
+          height: 233px;
+          border-radius: 50%;
+          left: -54px;
+          top: auto;
+          bottom: -169px;
+        }
+      }
+
+      &::after {
+        width: 400px;
+        height: 290px;
+        border-radius: 50%;
+        right: -196px;
+        bottom: -211px;
+
+        @include screen('lg') {
+          width: 309px;
+          height: 290px;
+          border-radius: 50%;
+          right: -116px;
+          bottom: -235px;
+        }
+
+        @include screen('sm') {
+          width: 309px;
+          height: 290px;
+          border-radius: 50%;
+          right: -245px;
+          bottom: -225px;
+        }
+      }
+
+      #{$b}__circle {
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        left: -238px;
+        bottom: -241px;
+
+        @include screen('lg') {
+          display: none;
+        }
+      }
     }
 
     &_4 {
-      background-color: $color-purple-2;
+      box-shadow: 0 0 0 3px $color-green-light-2 inset;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $color-green-light-2;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 287px;
+        height: 202px;
+        border-radius: 50%;
+        left: -132px;
+        top: -162px;
+
+        @include screen('lg') {
+          left: -139px;
+          top: -173px;
+        }
+
+        @include screen('sm') {
+          display: none;
+        }
+      }
+
+      &::after {
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        right: -201px;
+        bottom: -211px;
+
+        @include screen('lg') {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          right: -86px;
+          bottom: -252px;
+        }
+
+        @include screen('sm') {
+          width: 279px;
+          height: 300px;
+          border-radius: 50%;
+          right: auto;
+          bottom: -239px;
+          left: -100px;
+        }
+      }
     }
 
     &_5 {
-      background-color: $color-blue-light-2;
+      box-shadow: 0 0 0 3px $color-green-dark inset;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $color-green-dark;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 100px;
+        height: 206px;
+        border-radius: 50%;
+        left: -87px;
+        top: 61px;
+
+        @include screen('lg') {
+          width: 100px;
+          height: 159px;
+          border-radius: 50%;
+          left: -85px;
+          top: 114px;
+        }
+
+        @include screen('sm') {
+          width: 100px;
+          height: 159px;
+          border-radius: 50%;
+          left: auto;
+          top: -117px;
+          right: -64px;
+        }
+      }
+
+      &::after {
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        right: -202px;
+        bottom: -210px;
+
+        @include screen('lg') {
+          width: 214px;
+          height: 200px;
+          border-radius: 50%;
+          right: -13px;
+          bottom: -139px;
+        }
+
+        @include screen('sm') {
+          width: 214px;
+          height: 200px;
+          border-radius: 50%;
+          right: auto;
+          bottom: -136px;
+          left: -54px;
+        }
+      }
     }
 
     &_6 {
-      background-color: rgba($color-brown, .2);
+      box-shadow: 0 0 0 3px $color-blue-4 inset;
+
+      &::before, &::after, #{$b}__circle {
+        content: '';
+        position: absolute;
+        background-color: $color-blue-4;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 251px;
+        height: 117px;
+        border-radius: 50%;
+        left: 221px;
+        top: -94px;
+
+        @include screen('lg') {
+          width: 195px;
+          height: 117px;
+          border-radius: 50%;
+          left: 55px;
+          top: -104px;
+        }
+
+        @include screen('sm') {
+          width: 128px;
+          height: 117px;
+          border-radius: 50%;
+          left: auto;
+          top: -71px;
+          right: -95px;
+        }
+      }
+
+      &::after {
+        width: 400px;
+        height: 290px;
+        border-radius: 50%;
+        right: -204px;
+        bottom: -230px;
+
+        @include screen('lg') {
+          width: 299px;
+          height: 290px;
+          border-radius: 50%;
+          right: -105px;
+          bottom: -251px;
+        }
+
+        @include screen('sm') {
+          width: 299px;
+          height: 290px;
+          border-radius: 50%;
+          right: auto;
+          bottom: -230px;
+          left: -116px;
+        }
+      }
+
+      #{$b}__circle {
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        left: -238px;
+        bottom: -241px;
+
+        @include screen('lg') {
+          width: 323px;
+          height: 300px;
+          border-radius: 50%;
+          left: -200px;
+          bottom: -232px;
+        }
+
+        @include screen('sm') {
+          display: none;
+        }
+      }
     }
   }
 
   &__title {
     font-family: $font-second;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.63;
-    color: rgba($color-grey-dark, .8);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $color-grey;
 
-    @include screen('sm') {
-      font-size: 14px;
-      line-height: 1.57;
+    @include screen('lg') {
+      font-size: 16px;
+      line-height: 1.38;
     }
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 1.72;
-    color: rgba($color-grey-dark, .8);
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 500;
+    color: $color-grey;
+    max-width: 340px;
 
     @include screen('lg') {
-      line-height: 1.65;
+      font-size: 14px;
+      line-height: 1.43;
     }
 
     @include screen('sm') {
       font-size: 12px;
-      line-height: 1.67;
+      line-height: 1.5;
     }
 
     &:not(:first-child) {
-      margin-top: 19px;
+      margin-top: 22px;
+
+      @include screen('lg') {
+        margin-top: 18px;
+      }
+
+      @include screen('sm') {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__image {
+    bottom: 16px;
+    right: 16px;
+    position: absolute;
+    z-index: 2;
+
+    @include screen('lg') {
+      max-height: 120px;
+      max-width: 145px;
+    }
+
+    @include screen('sm') {
+      max-height: 107px;
+      max-width: 138px;
+      right: auto;
+      left: 16px;
     }
   }
 }

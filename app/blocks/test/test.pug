@@ -16,9 +16,6 @@ mixin test(json)
       +e.progressbar
         span
     +e.FORM.form(action="#" method="post")
-      +e.bg
-        span
-        span
       +slider.__slider.js-test-slider
         .swiper-wrapper
           - var n = 0;
@@ -34,10 +31,9 @@ mixin test-result()
         span
         span
       +b.test-item._result&attributes(attributes)
-        +e.H2.heading В тесте много ошибок
+        +e.H2.heading 0 – 3 правильных ответа
         +e.description
-          p 0 – 4 правильных ответа
-          p Рекомендуем: наверстать недостающие знания о правилах защиты питомца от наружных паразитов можно в разделе <a href="#">статьи.</a>
+          p Питомец подает сигнал SOS, а вы не догадываетесь! Вам стоит внимательнее относиться даже к забавным изменениям в поведении, ведь они могут говорить о проблеме зуда и других серьезных нарушениях в работе организма.
 
         +e.footer
           +button().__button Повторно пройти тест

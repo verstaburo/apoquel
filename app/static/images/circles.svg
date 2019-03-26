@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="278px" height="499px" viewBox="0 0 278 499" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>2EFF7AB0-A32E-4146-9259-72A80FFBCF21</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="1.13686838e-13" width="97" height="363"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="комп_тест_1_1280--" transform="translate(-1002.000000, -212.000000)">
+            <g id="Group-3" transform="translate(1002.000000, 212.000000)">
+                <circle id="Oval" fill="#2AA19B" cx="68" cy="462" r="16"></circle>
+                <circle id="Oval" fill="#4395B2" cx="184.5" cy="6.5" r="6.5"></circle>
+                <circle id="Oval-Copy" fill="#92C8C4" cx="33.5" cy="34.5" r="14.5"></circle>
+                <g id="Oval-Copy-3" transform="translate(234.500000, 181.500000) scale(-1, 1) translate(-234.500000, -181.500000) translate(186.000000, 0.000000)">
+                    <g id="Group-17">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill-opacity="0" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        <path d="M-53,323 C25.4244345,323 89,259.424434 89,181 C89,157.020771 83.0562863,134.42977 72.561754,114.619893 C48.7337589,69.6412669 1.44520511,39 -53,39 C-131.424434,39 -195,102.575566 -195,181 C-195,259.424434 -131.424434,323 -53,323 Z" id="Oval-Copy-3" fill="#92C8C4" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+                <path d="M34,321 C15.2223185,321 0,305.777681 0,287 C0,268.222319 15.2223185,253 34,253 C52.7776815,253 68,268.222319 68,287 C68,305.777681 52.7776815,321 34,321 Z M34.5,305 C44.1649831,305 52,297.164983 52,287.5 C52,277.835017 44.1649831,270 34.5,270 C24.8350169,270 17,277.835017 17,287.5 C17,297.164983 24.8350169,305 34.5,305 Z" id="Combined-Shape" fill="#2AA19B"></path>
+                <path d="M75,188 C61.745166,188 51,177.254834 51,164 C51,150.745166 61.745166,140 75,140 C88.254834,140 99,150.745166 99,164 C99,177.254834 88.254834,188 75,188 Z M75,176 C81.627417,176 87,170.627417 87,164 C87,157.372583 81.627417,152 75,152 C68.372583,152 63,157.372583 63,164 C63,170.627417 68.372583,176 75,176 Z" id="Combined-Shape-Copy" fill="#92C8C4"></path>
+                <circle id="Oval" fill="#4395B2" cx="234.5" cy="488.5" r="10.5"></circle>
+                <circle id="Oval-Copy-4" fill="#4395B2" cx="166.5" cy="112.5" r="11.5"></circle>
+                <circle id="Oval-Copy-2" fill="#4395B2" cx="156.5" cy="373.5" r="21.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

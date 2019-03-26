@@ -1,4 +1,6 @@
-mixin article-card(title, text)
+mixin article-card(image, title, text)
   +b.A.article-card&attributes(attributes)
     +e.H3.title!= title
     +e.P.text!= text
+    +e.IMG.image(src=image)
+    +e.circle

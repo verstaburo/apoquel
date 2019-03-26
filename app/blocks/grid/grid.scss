@@ -161,4 +161,40 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoit-name);
       }
     }
   }
+
+  &_size_four {
+    $grid-gap: 27px;
+    $grid-gap-vertical: 40px;
+    margin: -$grid-gap-vertical (-$grid-gap/2) (-$grid-gap/2);
+
+    #{$b}__col {
+      padding: $grid-gap-vertical $grid-gap/2 0;
+    }
+
+    @include screen('lg') {
+      $grid-gap: 12px;
+      $grid-gap-vertical: 40px;
+
+      margin-left: -$grid-gap/2;
+      margin-right: -$grid-gap/2;
+      margin-top: -$grid-gap-vertical;
+
+      #{$b}__col {
+        padding: $grid-gap-vertical $grid-gap/2 0;
+      }
+    }
+
+    @include screen('sm') {
+      $grid-gap: 12px;
+      $grid-gap-vertical: 14px;
+
+      margin-left: -$grid-gap/2;
+      margin-right: -$grid-gap/2;
+      margin-top: -$grid-gap-vertical;
+
+      #{$b}__col {
+        padding: $grid-gap-vertical $grid-gap/2 0;
+      }
+    }
+  }
 }
