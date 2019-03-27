@@ -22,6 +22,7 @@
   $b: &;
 
   p {
+
     &:not(:first-child) {
       margin-top: 16px;
 

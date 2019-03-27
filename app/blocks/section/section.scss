@@ -80,6 +80,21 @@
         padding-bottom: 32px;
       }
     }
+
+    &_three {
+      padding-top: 64px;
+      padding-bottom: 120px;
+
+      @include screen('lg') {
+        padding-top: 40px;
+        padding-bottom: 80px;
+      }
+
+      @include screen('sm') {
+        padding-top: 24px;
+        padding-bottom: 48px;
+      }
+    }
   }
 
   &__description {
@@ -260,6 +275,7 @@
       }
 
       &_five {
+
         &:not(:first-child) {
           margin-top: 27px;
 

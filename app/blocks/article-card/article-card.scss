@@ -15,7 +15,7 @@
   }
 
   @include screen('sm') {
-    padding: 20px 16px 145px 16px;
+    padding: 20px 16px 145px;
     min-height: 330px;
   }
 
@@ -26,6 +26,7 @@
   $b: &;
 
   &_color {
+
     &_1 {
       box-shadow: 0 0 0 3px $color-green-dark inset;
 

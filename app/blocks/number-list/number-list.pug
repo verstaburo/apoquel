@@ -1,0 +1,8 @@
+mixin number-list(data)
+  +b.number-list&attributes(attributes)
+    +grid.grid_size_five
+      each number in data
+        +col({xl: 6, sm: 12})
+          +e.item
+            +e.H3.title!= number.title
+            +e.P.text!= number.text

@@ -35,14 +35,14 @@
     color: $color-grey-3;
     transition: color $ease-main;
 
-    #{$b}_blue & {
+    #{$b}_blue &, #{$b}_white & {
       color: white;
     }
 
     &:hover {
       color: rgba(black, .5);
 
-      #{$b}_blue & {
+      #{$b}_blue &, #{$b}_white & {
         color: rgba(white, .5);
       }
     }
@@ -65,7 +65,7 @@
         content: ' >';
         color: black;
 
-        #{$b}_blue & {
+        #{$b}_blue &, #{$b}_white & {
           color: white;
         }
       }
@@ -75,4 +75,11 @@
       pointer-events: none;
     }
   }
+}
+
+.breadcrumbs-wrap {
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }

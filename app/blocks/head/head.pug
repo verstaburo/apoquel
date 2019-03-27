@@ -1,0 +1,12 @@
+mixin head-wrapper()
+  +b.head-wrapper&attributes(attributes)
+    block
+
+mixin head(title, text, image, imageClass)
+  +b.head&attributes(attributes)
+    .container
+      +e.texts
+        +e.H1.title!= title
+        +e.text!= text
+      +e.image(class=(imageClass || false))
+        img(src=image)

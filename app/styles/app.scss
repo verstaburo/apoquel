@@ -34,11 +34,7 @@
   }
 
   &_small {
-    max-width: 880px;
-
-    @include screen('lg') {
-      max-width: 690px;
-    }
+    max-width: 980px;
   }
 }
 
@@ -49,7 +45,7 @@ html {
 
 body {
   overflow: hidden;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -58,6 +54,6 @@ body {
 }
 
 button, a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
