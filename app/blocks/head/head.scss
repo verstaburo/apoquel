@@ -18,8 +18,30 @@
 
   $b: &;
 
+  &_faq {
+    padding-bottom: 23px;
+  }
+
   &_blue {
     background-color: $color-blue-4;
+  }
+
+  &_green {
+    background-color: $color-blue-3;
+  }
+
+  &_color {
+    &_1 {
+      background-color: $color-blue-5;
+    }
+
+    &_2 {
+      background-color: $color-green-light-2;
+    }
+
+    &_3 {
+      background-color: $color-blue-6;
+    }
   }
 
   .container {
@@ -60,6 +82,12 @@
     line-height: 2;
     max-width: 560px;
 
+    #{$b}_faq & {
+      @include screen('lg', min) {
+        margin-top: 10px;
+      }
+    }
+
     #{$b}_bigtext & {
       @include screen('lg', min) {
         font-size: 20px;
@@ -96,6 +124,50 @@
         }
       }
     }
+
+    ul, ol {
+      counter-reset: mylist;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+
+        @include screen('lg') {
+          margin-top: 8px;
+        }
+      }
+
+      li {
+        padding-left: 30px;
+        position: relative;
+
+        @include screen('lg') {
+          padding-left: 22px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 0px;
+        }
+
+        &::before {
+          position: absolute;
+          left: 11px;
+          top: 0;
+
+          @include screen('lg') {
+            left: 0;
+          }
+        }
+      }
+    }
+
+    ul li::before {
+      content: '•';
+    }
+
+    ol li::before {
+      counter-increment: mylist;
+      content: counter(mylist);
+    }
   }
 
   &__image {
@@ -128,4 +200,43 @@
 
 .head-wrapper {
   display: block;
+
+  &_changing .head {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.faq-head {
+  @include screen('sm') {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $ease-main;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    margin-top: 24px;
+
+    .head {
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        background: inherit;
+      }
+    }
+
+    &.is-active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }

@@ -95,6 +95,27 @@
         padding-bottom: 48px;
       }
     }
+
+    &_four {
+      padding-top: 37px;
+      padding-bottom: 100px;
+
+      @include screen('lg') {
+        padding-top: 32px;
+        padding-bottom: 80px;
+      }
+
+      @include screen('sm') {
+        padding-top: 13px;
+        padding-bottom: 48px;
+      }
+    }
+  }
+
+  &__faq-toggle {
+    @include screen('sm') {
+      display: none;
+    }
   }
 
   &__description {

@@ -13,6 +13,7 @@ import videoBlock from '../components/video-block/video-block';
 import mytest from '../blocks/test/test';
 import accordeon from '../blocks/accordeon/accordeon';
 import share from '../blocks/share/share';
+import faq from '../pages/faq/faq';
 
 const $ = window.$;
 
@@ -31,4 +32,5 @@ $(() => {
   parallax();
   accordeon();
   share();
+  faq();
 });

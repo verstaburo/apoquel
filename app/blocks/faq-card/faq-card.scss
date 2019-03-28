@@ -1,188 +1,114 @@
 .faq-card {
   display: block;
   box-sizing: border-box;
-  border-radius: 15px;
-  border: 8px solid $color-green;
-  padding: 78px 21px 46px;
+  border-radius: 12px;
+  padding: 32px;
   position: relative;
   width: 100%;
-
-  $b: &;
+  background-color: $color-blue-4;
+  color: white;
+  min-height: 262px;
+  cursor: pointer;
+  transition: opacity $ease-main;
+  overflow: hidden;
 
   @include screen('lg') {
-    padding-top: 72px;
+    padding: 26px 16px;
+    min-height: 154px;
   }
 
   @include screen('sm') {
-    padding: 48px 17px 34px;
+    min-height: 290px;
   }
 
-  &_purple {
-    border-color: $color-purple;
+  @include screen('sm', min) {
+    margin-bottom: 0 !important;
   }
 
-  &_blue {
-    border-color: $color-blue-bright;
+  &:hover, &.is-active {
+    opacity: .3;
   }
 
-  &_brown {
-    border-color: $color-brown;
+  &.is-active {
+    pointer-events: none;
   }
 
-  &_orange {
-    border-color: $color-orange;
-  }
+  $b: &;
 
-  &_yellow {
-    border-color: $color-yellow-3;
-  }
-
-  &__image {
-    font-size: 0;
-    position: absolute;
-    left: 0;
-    top: -70px;
-    height: 133px;
-    padding: 0 21px;
-
-    @include screen('lg') {
-      height: 120px;
-      top: -62px;
+  &_color {
+    &_1 {
+      background-color: $color-blue-5;
     }
 
-    @include screen('sm') {
-      height: 93px;
-      padding: 0 17px;
-      top: -54px;
+    &_2 {
+      background-color: $color-green-light-2;
     }
 
-    #{$b}_left & {
-      @include screen('lg', min) {
-        left: 0;
-        right: unset;
-      }
-    }
-
-    #{$b}_center & {
-      @include screen('lg', min) {
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
-    }
-
-    #{$b}_right & {
-      @include screen('lg', min) {
-        left: unset;
-        right: 0;
-      }
-    }
-
-    #{$b}_left_tablet & {
-      @include screen('lg') {
-        left: 0;
-        right: unset;
-      }
-    }
-
-    #{$b}_center_tablet & {
-      @include screen('lg') {
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
-    }
-
-    #{$b}_right_tablet & {
-      @include screen('lg') {
-        left: unset;
-        right: 0;
-      }
-    }
-
-    #{$b}_left_mobile & {
-      @include screen('sm') {
-        left: 0;
-        right: unset;
-      }
-    }
-
-    #{$b}_center_mobile & {
-      @include screen('sm') {
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
-    }
-
-    #{$b}_right_mobile & {
-      @include screen('sm') {
-        left: unset;
-        right: 0;
-      }
+    &_3 {
+      background-color: $color-blue-6;
     }
   }
 
   &__title {
     font-family: $font-second;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.63;
-    color: rgba($color-grey-dark, .8);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.56;
+    max-width: 60%;
 
-    @include screen('sm') {
-      font-size: 14px;
-      line-height: 1.6;
+    @include screen('lg') {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    #{$b}_vertical & {
+      max-width: 100%;
     }
   }
 
-  &__text {
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba($color-grey-dark, .8);
-    max-width: 1030px;
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 90%;
+    transform-origin: right bottom;
+
+    @include screen('lg') {
+      transform: scale(.6);
+    }
 
     @include screen('sm') {
-      font-size: 12px;
-      line-height: 1.67;
+      transform: none;
+      max-height: 50%;
     }
 
-    p {
-
-      &:not(:first-child) {
-        margin-top: 13px;
+    #{$b}_notext & {
+      @include screen('lg') {
+        transform: scale(1);
       }
     }
 
-    ul {
-
-      &:not(:first-child) {
-        margin-top: 13px;
-      }
-
-      li {
-        padding-left: 10px;
-        position: relative;
-
-        &::before {
-          content: '–';
-          position: absolute;
-          left: 0;
-          top: 0;
-        }
-
-        &:not(:first-child) {
-          margin-top: 5px;
-        }
+    #{$b}_left & {
+      @include screen('sm', min) {
+        right: auto;
+        left: 47px;
       }
     }
+  }
+}
 
-    &:not(:first-child) {
-      margin-top: 19px;
+.faq-grid {
+  @include screen('sm', min) {
+    overflow: hidden;
+    max-height: 330px;
+    transition: max-height $ease-main;
 
-      @include screen('sm') {
-        margin-top: 14px;
-      }
+    &.is-active {
+      max-height: 1700px;
     }
+  }
+
+  @include screen('md', min) {
+    max-height: 550px;
   }
 }

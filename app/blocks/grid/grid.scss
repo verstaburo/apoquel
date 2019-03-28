@@ -35,10 +35,6 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoit-name);
 
   $b: &;
 
-  .grid {
-    margin-top: 0;
-  }
-
   &__col {
     display: inline-block; // fallback для старых браузеров
     box-sizing: border-box;
@@ -166,7 +162,7 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoit-name);
     $grid-gap: 27px;
     $grid-gap-vertical: 40px;
 
-    margin: -$grid-gap-vertical (-$grid-gap/2) (-$grid-gap/2);
+    margin: -$grid-gap-vertical (-$grid-gap/2) 0;
 
     #{$b}__col {
       padding: $grid-gap-vertical $grid-gap/2 0;
@@ -203,7 +199,7 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoit-name);
     $grid-gap: 40px;
     $grid-gap-vertical: 64px;
 
-    margin: -$grid-gap-vertical (-$grid-gap/2) (-$grid-gap/2);
+    margin: -$grid-gap-vertical (-$grid-gap/2) 0;
 
     #{$b}__col {
       padding: $grid-gap-vertical $grid-gap/2 0;
@@ -225,6 +221,43 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoit-name);
     @include screen('sm') {
       $grid-gap: 16px;
       $grid-gap-vertical: 16px;
+
+      margin-left: -$grid-gap/2;
+      margin-right: -$grid-gap/2;
+      margin-top: -$grid-gap-vertical;
+
+      #{$b}__col {
+        padding: $grid-gap-vertical $grid-gap/2 0;
+      }
+    }
+  }
+
+  &_size_six {
+    $grid-gap: 12px;
+    $grid-gap-vertical: 12px;
+
+    margin: -$grid-gap-vertical (-$grid-gap/2) 0;
+
+    #{$b}__col {
+      padding: $grid-gap-vertical $grid-gap/2 0;
+    }
+
+    @include screen('lg') {
+      $grid-gap: 9px;
+      $grid-gap-vertical: 9px;
+
+      margin-left: -$grid-gap/2;
+      margin-right: -$grid-gap/2;
+      margin-top: -$grid-gap-vertical;
+
+      #{$b}__col {
+        padding: $grid-gap-vertical $grid-gap/2 0;
+      }
+    }
+
+    @include screen('sm') {
+      $grid-gap: 12px;
+      $grid-gap-vertical: 12px;
 
       margin-left: -$grid-gap/2;
       margin-right: -$grid-gap/2;
