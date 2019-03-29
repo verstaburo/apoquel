@@ -1,0 +1,42 @@
+mixin define()
+  +b.define&attributes(attributes)
+    .container
+      +e.content
+        +e.H2.title Как определить, что у собаки зуд?
+        +e.description
+          p Как и люди, каждая собака иногда чешется!
+          p Но если вы заметили, что ваши собака:
+        +e.description._bottom
+          p Если вы отмечаете хотя бы один из этих признаков, то настало время обратиться к ветеринарному врачу!
+        +button()(href="#").__button Подобрать дозировку
+      +e.background
+        +e.IMG.dog(src="assets/images/define_dog.png")
+      +e.background._dots
+        +e.dot._position_1
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Трется об ковёр, мебель и другие предметы
+        +e.dot._position_2
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Часто просыпается, чтобы почесаться
+        +e.dot._position_3
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Часто долго чешется
+        +e.dot._position_4
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Неохотно идет на прогулку
+        +e.dot._position_5
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Отказывается от корма
+        +e.dot._position_6
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Лижет лапы и живот
+        +e.dot._position_7
+          +e.bubble
+          +e.tooltip
+            +e.tooltip-content Перестает играть

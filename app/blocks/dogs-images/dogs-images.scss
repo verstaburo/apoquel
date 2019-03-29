@@ -1,0 +1,38 @@
+.dogs-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  @include screen('lg') {
+    max-width: 640px;
+  }
+
+  @include screen('sm') {
+    max-width: 300px;
+  }
+
+  $b: &;
+
+  &__image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    @include screen('lg') {
+      width: 170px;
+      height: 170px;
+    }
+
+    @include screen('sm') {
+      width: 88px;
+      height: 88px;
+    }
+
+    img {
+      @include fill-img;
+    }
+  }
+}

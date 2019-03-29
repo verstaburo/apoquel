@@ -2,7 +2,24 @@
 const $ = window.$;
 
 export default function faq() {
+  // Посмотреть все
+  $(document).on('click', '.js-toggle-button', function () {
+    const
+      parent = $(this).parent();
+
+    $(document).find($(this).data('toggle-target')).slideDown(300, function () {
+      $(this).css({ display: $(this).data('toggle-type'), });
+    });
+    $(this).remove();
+
+    if (parent.is(':empty')) {
+      parent.remove();
+    }
+  });
+
   const heads = $(document).find('.faq-head');
+
+  if (!heads.length) return;
 
   $(document).on('click', '.js-faq-card', function () {
     const
@@ -39,17 +56,5 @@ export default function faq() {
   if ($(window).width() >= 768) {
     $(document).find('[data-faq-card]')[0].click();
   }
-
-  // Посмотреть все
-  $(document).on('click', '.js-toggle-button', function () {
-    $(document).find($(this).data('toggle-target')).addClass('is-active');
-    $(this).remove();
-
-    setTimeout(function () {
-      $(document).find($(this).data('toggle-target')).css({
-        maxHeight: 'none',
-      });
-    }, 300);
-  });
 };
 /* eslint-enable */

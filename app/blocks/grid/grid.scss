@@ -268,4 +268,28 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoit-name);
       }
     }
   }
+
+  &_size_seven {
+    $grid-gap: 24px;
+    $grid-gap-vertical: 15px;
+    margin: -$grid-gap-vertical (-$grid-gap/2) 0;
+
+    #{$b}__col {
+      padding: $grid-gap-vertical $grid-gap/2 0;
+    }
+
+    @include screen('lg') {
+      $grid-gap: 10px;
+      $grid-gap-vertical: 10px;
+      margin: -$grid-gap-vertical (-$grid-gap/2) 0;
+
+      #{$b}__col {
+        padding: $grid-gap-vertical $grid-gap/2 0;
+      }
+    }
+  }
+}
+
+.js-faq-col {
+  display: none;
 }

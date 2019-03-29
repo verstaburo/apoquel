@@ -17,25 +17,23 @@
   &__dot {
     width: 10px;
     height: 10px;
-    margin: 6px;
-    background-color: $color-grey-light;
+    margin: 9px 10px;
+    background-color: transparent;
     border-radius: 50%;
     transition: background-color $ease-main, transform $ease-main;
     position: static !important;
     cursor: pointer;
+    border: 2px solid $color-red;
 
     @include screen('sm') {
-      width: 8px;
-      height: 8px;
-      margin: 2px;
+      width: 7px;
+      height: 7px;
+      margin: 9px 5px;
     }
 
     &.is-active {
-      background-color: $color-yellow-2;
-
-      @include screen('sm', min) {
-        transform: scale(1.1);
-      }
+      background-color: $color-red;
+      transform: scale(1.5);
     }
   }
 }

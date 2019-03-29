@@ -1,0 +1,10 @@
+mixin reason-card(data)
+  +b.reason-card(class=(data.class || false))&attributes(attributes)
+    +e.H3.title!= data.title
+
+    +e.UL.list
+      each item in data.items
+        +e.LI.item!= item
+
+    +e.bg
+      img(src=data.image)

@@ -4,8 +4,74 @@
   display: block;
   overflow: visible;
   touch-action: pan-y pinch-zoom;
+  width: 100%;
+  position: relative;
 
   $b: &;
+
+  &__banner {
+    width: 100%;
+  }
+
+  &_banners {
+    background-color: #41aea5;
+    
+    .swiper-slide {
+      height: 428px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include screen('lg') {
+        height: 360px;
+      }
+
+      @include screen('sm') {
+        height: 148px;
+      }
+    }
+  }
+
+  &_articles {
+    .swiper-slide {
+      @include screen('lg') {
+        width: 291px;
+        min-width: 40vw;
+      }
+
+      @include screen('sm') {
+        width: 230px;
+        min-width: 60vw;
+      }
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    left: 0;
+    bottom: 10px !important;
+    width: 100%;
+    z-index: 2;
+
+    #{$b}_banners & {
+      @include screen('sm') {
+        display: none;
+      }
+    }
+
+    .js-reason-slider & {
+      position: static;
+    }
+  }
 
   .swiper-wrapper {
     width: auto;
@@ -31,8 +97,31 @@
 }
 
 .js-faq-slider.swiper-container-horizontal {
+  @include screen('sm') {
+    .swiper-slide {
+      &:first-child {
+        width: 726px;
+      }
 
-  .swiper-slide {
-    width: calc(100vw - 36px - 206px);
+      &:last-child {
+        width: 242px;
+        margin-left: 12px;
+      }
+    }
+
+    .swiper-wrapper {
+      margin-top: -12px;
+    }
+
+    .faq-card {
+      padding: 12px 32px 150px 16px;
+      min-height: 230px;
+    }
+
+    .grid__col {}
+
+    .faq-card__title {
+      max-width: none;
+    }
   }
 }

@@ -36,27 +36,27 @@ block content
               +faq-card('assets/images/dog_3.png', 'Существуют ли ограничения в применении Апоквел?')(data-faq-card="3")._color_2.js-faq-card
         +col({xl: 4, sm: 12}).grid__col_grow
           +faq-card('assets/images/dog_4.png', 'Что такое атопический дерматит и каковы симптомы болезни?')(data-faq-card="4")._color_3._vertical.js-faq-card
-        +col({xl: 4, sm: 12}).grid__col_grow
+        +col({xl: 4, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
           +faq-card('assets/images/dog_5.png')(data-faq-card="5")._color_3._notext.js-faq-card
         +col({xl: 8, sm: 12}).grid__col_grow
           +grid.grid_size_six
-            +col({xl: 12, sm: 12}).grid__col_grow
+            +col({xl: 12, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
               +faq-card('assets/images/dog_6.png', 'Можно ли принимать Апоквел, если собаке назначены другие препараты?')(data-faq-card="6").js-faq-card
-            +col({xl: 6, sm: 12}).grid__col_grow
+            +col({xl: 6, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
               +faq-card('assets/images/dog_7.png', 'Как долго можно применять Апоквел?')(data-faq-card="7")._color_2.js-faq-card
-            +col({xl: 6, sm: 12}).grid__col_grow
+            +col({xl: 6, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
               +faq-card('assets/images/dog_8.png', 'Можно ли делить таблетку Апоквел?')(data-faq-card="8")._color_1.js-faq-card
-        +col({xl: 4, sm: 12}).grid__col_grow
+        +col({xl: 4, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
           +faq-card('assets/images/dog_9.png', 'Как применять Апоквел?')(data-faq-card="9")._color_2.js-faq-card
-        +col({xl: 4, sm: 12}).grid__col_grow
+        +col({xl: 4, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
           +faq-card('assets/images/dog_10.png', 'Почему Апоквел лучше стероидов?')(data-faq-card="10").js-faq-card
-        +col({xl: 4, sm: 12}).grid__col_grow
+        +col({xl: 4, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
           +faq-card('assets/images/dog_11.png', 'Почему Апоквел лучше циклоспоринов?')(data-faq-card="11")._color_2.js-faq-card
-        +col({xl: 8, sm: 12}).grid__col_grow
+        +col({xl: 8, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
           +faq-card('assets/images/dog_12.png')(data-faq-card="12")._color_3._left._notext.js-faq-card
-        +col({xl: 4, sm: 12}).grid__col_grow
+        +col({xl: 4, sm: 12}).grid__col_grow.js-faq-col(data-toggle-type="flex")
           +faq-card('assets/images/dog_13.png')(data-faq-card="13")._color_1._notext.js-faq-card
 
     +section-footer.__faq-toggle
-      +button('button')(type="button" data-toggle-target=".faq-grid").js-toggle-button Посмотреть все
+      +button('button')(type="button" data-toggle-target=".js-faq-col").js-toggle-button Посмотреть все
 

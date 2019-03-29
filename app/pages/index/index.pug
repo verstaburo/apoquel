@@ -4,91 +4,129 @@ block head
   - var pageTitle = 'Апоквел | Главная'
 
 block content
-  +video-block('assets/video/video.mp4', 'assets/images/poster.jpg', 'Симпарика – защита от блох и клещей до 15 недель! <span>*</span>', '*При использовании упаковки на 3 таблетки.')
+  +slider(true).slider_banners.js-banners-slider
+    .swiper-wrapper
+      .swiper-slide
+        img(src="assets/images/slide_1.jpg").slider__banner
+      .swiper-slide
+        img(src="assets/images/slide_2.jpg").slider__banner
+      .swiper-slide
+        img(src="assets/images/slide_3.jpg").slider__banner
 
+  +video-block('assets/video/video.mp4', 'assets/images/poster.jpg')
+
+  // Как определить что у собаки зуд
+  +define
+
+  // Что вызывает зуд
   +section._line
-    +section-header('Я выбираю Симпарику')
+    +section-header('Что вызывает зуд?')._has-button
+      +button()(href="doctor.html").__button.show-desktop О чем рассказать на приеме у ветврача
+
+    +section-content._margin_seven
+      +slider(true).js-reason-slider
+        +grid.grid_size_seven.faq-grid.swiper-wrapper
+          each item in getData('zood')
+            +col({xl: 6, sm: 12}).grid__col_grow.swiper-slide
+              +reason-card(item)
+
+    +section-footer._margin_one.hide-desktop
+      +button()(href="doctor.html") О чем рассказать на приеме у ветврача
+
+  // Пройдите тест
+  +section._line
     +section-content
-      +slider(true).js-advantages-slider
-        +grid.grid_size_one.swiper-wrapper
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_1.png', 'Таблетки Симпарика приводят к гибели блох уже через 3 часа после применения. Паразиты не успевают отложить жизнеспособные яйца')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_2.png', 'Симпарика от блох и клещей предназначена для собак в возрасте от 8 недель и весом от 1,3 кг')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_3.png', 'Симпарика для собак защищает от 9 видов иксодовых клещей')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_4.png', '1 таблетка Симпарики действует 35 дней (5 недель). 1 упаковка – до 15 недель защиты')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_5.png', 'Таблетки Симпарика снижают риск заражения опасными заболеваниями, передаваемыми иксодовыми клещами (бабезиоз, анаплазмоз, боррелиоз)')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_6.png', 'При применении в соответствии с инструкцией побочные явления не наблюдаются')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_7.png', 'Подходит для лечения отодектоза (ушного клеща), саркоптоза (зудневой чесотки), демодекоза (подкожного клеща)')
-          +col({'xl': 6, 'sm': 12}).swiper-slide
-            +info-item('assets/images/icon_8.png', 'Таблетки Симпарика имеют привлекательный вкус, их можно давать независимо от приема корма')
-    +section-footer
-      +button()(href="instruction.html") Инструкция
+      +banner('assets/images/dog_14.png', 'Проверьте свое умение понимать питомца без слов с помощью простого теста', 'Пройти тест')
 
-  +section-nocontainer._products
-    .container
-      +section-header('Подберите правильную дозировку')
-        +e.description
-          p Средство от блох и клещей подходит для собак мелких и крупных пород. Дозировка зависит от веса и возраста собаки. Препарат рассчитан на собак в возрасте от 8 недель и весом от 1,3 кг, поэтому подойдет даже для мелких пород. Для собак свыше 60 кг подбирают комбинацию таблеток, согласно инструкции к препарату.
-    +section-content._margin_three
-      +products
+  // Вопросы и ответы
+  +section._line
+    +section-header('Вопросы и ответы')._has-button
+      +button()(href="faq.html").__button.show-desktop Посмотреть все
+    +section-content._margin_seven
+      +slider().slider_faq.js-faq-slider
+        +grid.grid_size_six.faq-grid.swiper-wrapper
+          +col({xl: 8, sm: 12}).grid__col_grow.swiper-slide
+            +grid.grid_size_six
+              +col({xl: 12, sm: 4}).grid__col_grow
+                +faq-card('assets/images/dog_1.png', 'Как определить, что у моей собаки зуд является проблемой?')(data-faq-card="1" href="faq.html").js-faq-card
+              +col({xl: 6, sm: 4}).grid__col_grow
+                +faq-card('assets/images/dog_2.png', 'Что такое аллергический дерматит?')(data-faq-card="2" href="faq.html")._color_1.js-faq-card
+              +col({xl: 6, sm: 4}).grid__col_grow
+                +faq-card('assets/images/dog_3.png', 'Существуют ли ограничения в применении Апоквел?')(data-faq-card="3" href="faq.html")._color_2.js-faq-card
+          +col({xl: 4, sm: 12}).grid__col_grow.swiper-slide
+            +faq-card('assets/images/dog_4.png', 'Что такое атопический дерматит и каковы симптомы болезни?')(data-faq-card="4" href="faq.html")._color_3._vertical.js-faq-card
+    +section-footer._margin_one.hide-desktop
+      +button()(href="faq.html") Посмотреть все
 
-  +section
-    +section-content
-      +banner('assets/images/dog_5.png', 'Пройдите тест и узнайте, как защитить вашу собаку от наружных паразитов!')
-        +button()(href="test.html").__button Пройти тест
-
-  +section._grey
-    +section-header('Вопросы и ответы')
-    +section-content._margin_two
-      +slider(true).js-faq-slider
-        +grid.swiper-wrapper
+  // Узнайте больше о
+  +section._line
+    +section-header('Узнайте больше о проблеме зуда у питомцев')._has-button
+      +button('button')(type="button").__button.show-desktop Посмотреть все
+    +section-content._margin_seven
+      +slider().slider_articles.js-articles-slider
+        +grid.grid_size_six.swiper-wrapper
           +col({'xl': 4, 'sm': 12}).grid__col_grow.swiper-slide
-            +faq-card('assets/images/dog_1.png', 'После приема таблетки можно ли купать собаку? Не снизится ли противопаразитарное действие?', 'Одним из преимуществ таблеток является то, что купание и мытье не снижает действия препарата. Вы можете мыть вашу собаку, а ваша собака может наслаждаться летними заплывами.')
+            +article-card('assets/images/dog_image_1.png', 'Как определить, что у моей собаки зуд является проблемой?')(href="article.html")._color_1._notext
           +col({'xl': 4, 'sm': 12}).grid__col_grow.swiper-slide
-            +faq-card('assets/images/dog_2.png', 'При укусе клеща возможно заражение пироплазмозом – опасным для собак заболеванием. Защитит ли Симпарика от пироплазмоза мою собаку?', 'Симпарика не только вызывает гибель иксодовых клещей, но и снижает риск заражения такими опасными болезнями, передаваемыми иксодовыми клещами, как: пироплазмоз (бабезиоз), Болезнь Лайма (боррелиоз) и анаплазмоз.')._center._blue
+            +article-card('assets/images/dog_image_2.png', 'Как определить, что у моей собаки является проблемой?')(href="article.html")._color_2._notext
           +col({'xl': 4, 'sm': 12}).grid__col_grow.swiper-slide
-            +faq-card('assets/images/dog_3.png', 'Есть ли ограничения при применении Симпарики?', 'Препарат Симпарика можно применять щенкам с 8-недельного возраста, всем породам собак весом от 1,3 кг. Если у вашей собаки есть хронические заболевания почек и печени –проконсультируйтесь с ветеринарным врачом.')._right._purple
-    +section-footer._margin_one
-      +button()(href="faq.html") Смотреть все
+            +article-card('assets/images/dog_image_3.png', 'Как определить, что у моей собаки зуд является проблемой?')(href="article.html")._color_3._notext
+    +section-footer._margin_one.hide-desktop
+      +button()(href="articles.html") Посмотреть все
 
-  +video-block('assets/video/video.mp4', 'assets/images/poster.jpg', 'Откройте сезон весенних прогулок с Симпарика!')._small
+  +video-block('assets/video/video.mp4', 'assets/images/poster.jpg', 'Как действует Апоквел?')
 
-  +section
-    +section-header('Статьи')
-    +section-content._margin_four
-      +grid.grid_size_three
-        +col({'xl': 6, 'sm': 12}).grid__col_grow
-          +article-card('Собаку укусил клещ, что делать?', 'С приходом первых теплых дней хозяевам собак стоит быть особенно внимательными к своим питомцам. Любая прогулка, на природе или в городском парке, может закончиться встречей с клещом, паразитом, одинаково опасным для животного и человека. Несмотря на маленький размер, клещи могут нанести серьезный урон здоровью.   ')(href="article.html")
-        +col({'xl': 6, 'sm': 12}).grid__col_grow
-          +article-card('Средства защиты для щенка, кормящей и беременной собаки против паразитов', 'Защита от паразитов нужна всем собакам. Обычно выбрать хорошее средство для животного не сложно, но как быть владельцам щенков и собак, которые собираются родить или недавно ощенились? Ведь ветеринарный препарат должен не только эффективно защищать, иметь продолжительное действие, но и быть безопасным для питомца.')(href="article.html")._color_2
-    +section-footer._margin_one
-      +button()(href="articles.html") Смотреть все
+  // Я выбираю Апоквел
+  +section._line
+    +section-header('Я выбираю Апоквел')._has-button
+    +section-content._margin_seven
+      +grid.grid_size_six
+        +col({xl: 4, lg: 6, sm: 12}).grid__col_grow
+          +choose-card('assets/images/choose_1.svg', 'Снимает воспаление', 'Апоквел снимает воспаление и отек кожи, возникающие при расчесах.')._color_1
+        +col({xl: 4, lg: 6, sm: 12}).grid__col_grow
+          +choose-card('assets/images/choose_2.svg', 'Можно не откладывать вакцинацию', 'Собак, принимающих Апоквел, можно вакцинировать (после консультации с ветеринарным врачом) .')._color_2
+        +col({xl: 4, lg: 6, sm: 12}).grid__col_grow
+          +choose-card('assets/images/choose_3.svg', '24 часа без зуда', 'Препарат удобно применять. Всего одна доза в день, независимо от приема пищи.<sup>*2,3</sup>')._color_1
+        +col({xl: 12, lg: 6, sm: 12}).grid__col_grow
+          +choose-card('assets/images/choose_4.svg', 'Подходит для продолжительного  лечения', 'Это важно, если у собаки есть нарушение, требующее пожизненной терапии. Например, атопический дерматит, который нужно лечить под наблюдением ветеринарного врача.')._color_3
+        +col({xl: 4, lg: 6, sm: 12}).grid__col_grow.hide-mobile.js-choose-card(data-toggle-type="flex")
+          +choose-card('assets/images/choose_5.svg', 'Устраняет признаки зуда', 'Собака перестает чесаться и разлизывать лапы и живот, расчесывать уши – меньше поводов для беспокойства любимца и хозяина.')._color_4
+        +col({xl: 4, lg: 6, sm: 12}).grid__col_grow.hide-mobile.js-choose-card(data-toggle-type="flex")
+          +choose-card('assets/images/choose_6.svg', 'Действует с первого приема ', 'Собака перестает чесаться через 4 часа после приема дозы Апоквел.<sup>*1</sup>')._color_2
+        +col({xl: 4, lg: 6, sm: 12}).grid__col_grow.hide-mobile.js-choose-card(data-toggle-type="flex")
+          +choose-card('assets/images/choose_7.svg', 'Препарат нового поколения ', 'Апоквел целенаправленно борется с зудом у собак. ')._color_4
+        +col({xl: 12, lg: 6, sm: 12}).grid__col_grow.hide-mobile.js-choose-card(data-toggle-type="flex")
+          +choose-card('assets/images/choose_8.svg', 'Успешная практика применения', 'Более 4-х лет Апоквел широко применяется в США и Европе. Не имеет последствий для здоровья, связанных с приемом, как у стероидов<sup>*4-8</sup>. В отличие от циклоспоринов<sup>*9-13</sup> действует с первого дня приема и может быть назначен при любой аллергии. Действие Апоквела у собак доказано, в отличие от антигистаминных препаратов.<sup>*14, 15</sup>')._color_1
+        +col({xl: 6, sm: 12}).grid__col_grow.hide-mobile.js-choose-card(data-toggle-type="flex")
+          +choose-card('assets/images/choose_9.svg', 'Можно применять с другими препаратами', 'Апоквел не снижает действие НПВС, антибиотиков и аллерго иммунотерапии.')._color_2
+        +col({xl: 6, sm: 12}).grid__col_grow.hide-mobile.js-choose-card(data-toggle-type="flex")
+          +choose-card('assets/images/choose_10.svg', 'Препарат не влияет на результаты анализов! ', 'Собака больше не чешется и получает облегчение, а врач может продолжать обследования, чтобы выявить причину основного заболевания.')._color_3
 
-    +accordeon('Список источников')._margin_one
-      +content-zone
-        +content-zone._about
+
+    +section-footer._margin_one.show-mobile
+      +button('button')(type="button" href="articles.html" data-toggle-target=".js-choose-card").js-toggle-button Посмотреть еще
+
+    +e.text-block
+      +e.text
+        p *  Первые две недели – 2 раза в день, с 15-го дня один раз в день;
+        p **Препараты безрецептурного отпуска, применяемые в ветеринарии;
+
+      +accordeon('Список литературы')._margin_one
+        .literature-list
           ol
-            li
-              p Six RH, Geurden T, Packianathan R, Colgan S, Everett WR, Grace S, Hodge A, Mahabir SP, Myers MR, Slootmans N, Davis K. Evaluation of the effectiveness of a novel oral formulation of sarolaner (Simparica™) for the treatment and control of fleas on dogs // Vet Parasitol. 2016 May 30;222:18-22. doi:10.1016/j.vetpar.2016.02.015. Epub 2016 Feb 17.
-            li
-              p Geurden T, Becskei C, Grace S, Strube C, Doherty P, Liebenberg J, Mahabir SP, Slootmans N, Lloyd A, Six RH. Efficacy of a novel oral formulation of sarolaner(Simparica™) against four common tick species infesting dogs in Europe // Vet Parasitol. 2016 May 30;222:33-6. doi: 10.1016/j.vetpar.2016.03.024. Epub 2016 Apr 1.
-            li
-              p Six RH, Becskei C, Carter L, Gale B, Young DR, Mahabir SP, Chapin S, Myers MR. Evaluation of the speed of kill, effects on reproduction, and effectiveness in a simulated infested-home environment of sarolaner (Simparica™) against fleas on dogs // Vet Parasitol. 2016 May 30;222:23-7. doi: 10.1016/j.vetpar.2016.02.026. Epub 2016 Mar 4.
-            li
-              p Becskei C., De Bock F., Illambas J., Cherni J.A., Fourie J.J., Myers M.R., Mahabir S.P., Six R.H. Efficacy and safety of a novel oral isoxazoline, sarolaner (SimparicaTM), for the treatment of sarcoptic mange in dogs // Vet. Parasitol. Volume 222, 2016, pp. 56-61
-            li
-              p Six RH, Becskei C, Mazaleski MM, Fourie JJ, Mahabir SP, Myers MR, Slootmans N. Efficacy of sarolaner, a novel oral isoxazoline, against two common mite infestations in dogs: Demodex spp. and Otodectes cynotis // Vet.Parasitol. 222 (2016) 62–66 (A166C-ZA-12-012).
-            li
-              p Berg TC, Honsgeuer N, Mahabir S, Six R. Evaluation of the Efficacy of PF-06450567 in the Prevention of Borrelia burgdorferi and Anaplasma phagocytophilum Transmission from Wild Caught Ixodes scapularis to Dogs. Study Number A160C-US-12-079. 1 Aug 2014.
-            li
-              p Geurden T, Stegemann M, Mahabir S, Bruno R, Six R. Evaluation of the Efficacy of PF-06450567 in the Prevention of Babesia canis Transmission by Infected Dermacentor reticulatus to Dogs. Study Number A160C-ZA-13-227. 26 May 2014.
-            li
-              p Becskei C, De Bock F, Illambas J, Mahabir SP, Farkas R, Six RH. Efficacy and safety of a novel oral isoxazoline, sarolaner (Simparica™) in the treatment of naturally occurring flea and tick infestations in dogs presented as veterinary patients in Europe. Vet Parasitol. 2016 May 30;222:49-55. doi: 10.1016/j.vetpar.2016.02.007. Epub 2016 Mar 16.
-            li
-              p Six RH, Geurden T, Carter L, Everett WR, McLoughlin A, Mahabir SP, MyersMR, Slootmans N. Evaluation of the speed of kill of sarolaner (Simparica™) against induced infestations of three species of ticks (Amblyomma maculatum, Ixodes scapularis, Ixodes ricinus) on dogs // Vet Parasitol. 2016 May 30;222:37-42. doi: 10.1016 j.vetpar.2016.02.014. Epub 2016 Feb 17.
+            li Gadeyne et al. Vet Dermatol. 2014;25(6):512-518.
+            li Cosgrove et al Vet Dermatol. 2015;26(3):171-179.
+            li Aleo et al Vet Dermatol. 2013;24(3):297.
+            li Data on file: Pet Owner Quantitative Market Research, Zoetis LLC.
+            li Journal of Veterinary Behavior (2011) 6, 321-327.
+            li Edwards SH. The Merck Veterinary Manual. 11th ed. Kenilworth, NJ: Merck Sharp & Dohme Corp; 2014.<br><a href="#">merckvetmanual.com/pharmacology/anti-inflammatory-agents/corticosteroids?qt=antiinflammatoryagents&alt=sh</a> Accessed January 4, 2018.
+            li Sousa CA. Glucocosteroids in veterinary dermatology. In: Bonagura JD, Twedt DC, eds. Kirk’s Current Veterinary Therapy. 14th ed. St. Louis, MO: Saunders Elsevier; 2009:400-404.
+            li Data on file, APOQUEL/CYTOPOINT Vet Tracker Wave 9, 2018, Zoetis Inc.
+            li Matsuda S, Koyasu S. Mechanisms of action of cyclosporine. Immunopharmacology 47:119–125, 2000. Atopica FOI, 2003.
+            li Miller WH, Griffin CE, Campbell KL, eds. Muller & Kirk’s Small Animal Dermatology. 7th ed. St. Louis, MO: Elsevier, Mosby; 2013:108-183.
+            li Olivry T, et al.  Treatment of canine atopic dermatitis: 2010 clinical practice guidelines from the International Task Force on canine atopic dermatitis. Vet. Dermatol. 2010;21(3):233-48.
+            li Olivry T, Rivierre C, Jackson HA, Murphy KM, Davidson G, Sousa CA. Cyclosporine decreases skin lesions and pruritus in dogs with atopic <a href="#">dermatitis: a blinded randomized prednisolone-controlled</a> trial. Veterinary Dermatology 2002;13: 77–87.
+            li Steffan J, Alexander D, Fabienne B, Fisch RD. Comparison of cyclosporine A with methylprednisolone for treatment of canine
+            li J Vet Sci 2016, 17 (4), 549-553.
+            li Olivry et al. BMC Veterinary Research (2015) 11:210 DOI 10.1186/s12917-015-0514-6.
+            li Study 1462N-60-09-927 .

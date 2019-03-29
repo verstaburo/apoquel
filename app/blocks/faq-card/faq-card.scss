@@ -33,6 +33,10 @@
     pointer-events: none;
   }
 
+  &.is-hidden {
+    display: none;
+  }
+
   $b: &;
 
   &_color {
@@ -94,21 +98,5 @@
         left: 47px;
       }
     }
-  }
-}
-
-.faq-grid {
-  @include screen('sm', min) {
-    overflow: hidden;
-    max-height: 330px;
-    transition: max-height $ease-main;
-
-    &.is-active {
-      max-height: 1700px;
-    }
-  }
-
-  @include screen('md', min) {
-    max-height: 550px;
   }
 }

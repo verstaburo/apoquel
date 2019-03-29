@@ -8,25 +8,20 @@
   }
 
   &__title {
-    font-family: $font-second;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 1.5;
-    padding-right: 42px;
+    line-height: 22px;
+    padding-right: 30px;
     position: relative;
     display: inline-block;
     max-width: 100%;
     cursor: pointer;
     transition: opacity $ease-main;
 
-    @include screen('lg') {
-      padding-right: 37px;
-    }
-
     @include screen('sm') {
       font-size: 14px;
-      line-height: 1.57;
-      padding-right: 35px;
+      line-height: 17px;
+      padding-right: 25px;
     }
 
     &:hover {
@@ -37,24 +32,19 @@
       content: '';
       position: absolute;
       right: 0;
-      top: 8px;
-      width: 26px;
-      height: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 16px;
+      height: 9px;
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-image: url('../images/arrow_2.svg');
       transition: transform $ease-main;
 
-      @include screen('lg') {
-        top: 9px;
-        width: 22px;
-        height: 12px;
-      }
-
       @include screen('sm') {
-        top: 4px;
-        width: 19px;
-        height: 11px;
+        width: 15px;
+        height: 8px;
       }
     }
 
@@ -67,15 +57,14 @@
   }
 
   &__content {
-    padding-top: 30px;
-    max-width: 1058px;
+    padding-top: 26px;
 
     @include screen('lg') {
-      padding-top: 21px;
+      padding-top: 24px;
     }
 
     @include screen('sm') {
-      padding-top: 16px;
+      padding-top: 14px;
     }
 
     &-wrapper {
@@ -87,15 +76,14 @@
   &_margin {
 
     &_one {
-      margin-top: 74px;
+      margin-top: 48px;
 
       @include screen('lg') {
         margin-top: 40px;
       }
 
       @include screen('sm') {
-        margin-top: 62px;
-        margin-bottom: 30px;
+        margin-top: 34px;
       }
     }
   }

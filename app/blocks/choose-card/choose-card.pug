@@ -1,0 +1,6 @@
+mixin choose-card(image, title, text)
+  +b.choose-card&attributes(attributes)
+    +e.H3.title!= title
+    +e.P.text!= text
+    +e.image
+      img(src=image)

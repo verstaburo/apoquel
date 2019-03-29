@@ -1,0 +1,15 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Апоквел | Подбери дозировку'
+
+block content
+  +video-block('assets/video/video.mp4', 'assets/images/poster.jpg', 'Как действует Апоквел?')
+
+  +section._blue._padding_five
+    +section-header('Как давать препарат собаке?')
+      +e.description
+        p В любое удобное для вас время, независимо от приема корма.
+        p Прием корма не влияет на действие Апоквел
+    +section-content._margin_six
+      +dogs-images

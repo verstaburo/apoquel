@@ -57,3 +57,27 @@ button, a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
+
+.show-desktop {
+  @include screen('lg') {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @include screen('lg', min) {
+    display: none;
+  }
+}
+
+.show-mobile {
+  @include screen('sm', min) {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  @include screen('sm') {
+    display: none;
+  }
+}

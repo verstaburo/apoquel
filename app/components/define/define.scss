@@ -1,0 +1,388 @@
+.define {
+  display: block;
+  position: relative;
+  background-color: $color-blue-10;
+  color: white;
+  padding: 40px 0 56px;
+  text-align: center;
+
+  @include screen('lg') {
+    padding: 32px 0 32px;
+  }
+
+  @include screen('sm') {
+    padding: 32px 0 37px;
+  }
+
+  $b: &;
+
+  &__content {
+    pointer-events: none;
+  }
+
+  &::before, &::after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 340px;
+    background-color: $color-blue-9;
+
+    @include screen('lg') {
+      height: 183px;
+    }
+  }
+
+  &::after {
+    left: calc(50% + 150px);
+    background-color: $color-blue-11;
+  }
+
+  &__title {
+    font-family: $font-second;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 52px;
+    pointer-events: all;
+    position: relative;
+    z-index: 3;
+
+    @include screen('lg') {
+      font-size: 25px;
+      line-height: 32px;
+    }
+
+    @include screen('sm') {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    display: block;
+    margin: 16px auto 0;
+    max-width: 600px;
+    pointer-events: all;
+    position: relative;
+    z-index: 3;
+
+    @include screen('lg') {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 8px;
+      max-width: 420px;
+    }
+
+    @include screen('sm') {
+      margin-top: 16px;
+      min-width: 295px;
+    }
+
+    &_bottom {
+      margin-top: 504px;
+
+      @include screen('lg') {
+        margin-top: 259px;
+      }
+
+      @include screen('sm') {
+        margin-top: 253px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    pointer-events: all;
+    position: relative;
+    z-index: 3;
+
+    @include screen('lg') {
+      margin-top: 13px;
+    }
+
+    @include screen('sm') {
+      margin-top: 24px;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1280px;
+    background: url('../images/define_desktop.svg') center top no-repeat;
+    background-position: calc(50% - 34px) top;
+    height: 100%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    &_dots {
+      background: none !important;
+      z-index: 5;
+    }
+
+    @include screen('lg') {
+      background-image: url('../images/define_tablet.jpg');
+      background-size: 100%;
+      width: 768px;
+      background-position: center top;
+    }
+
+    @include screen('sm') {
+      background-image: url('../images/define_mobile.svg');
+      width: 320px;
+    }
+  }
+
+  &__dog {
+    position: absolute;
+    left: 36px;
+    top: 236px;
+    right: 0;
+    margin: auto;
+    height: 312px;
+
+    @include screen('lg') {
+      height: 189px;
+      top: 130px;
+      left: 0;
+      display: none;
+    }
+
+    @include screen('sm') {
+      height: 167px;
+      top: 117px;
+      left: -25px;
+      display: block;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $color-red;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+
+    @include screen('lg') {
+      width: 4px;
+      height: 4px;
+    }
+
+    #{$b}__bubble {
+      z-index: -1;
+      background-color: rgba(white, .3);
+      border: 1px solid #979797;
+      width: 40px;
+      height: 40px;
+      transform: translate3d(-50%, -50%, 0) scale(0);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      animation-name: dot;
+      animation-timing-function: ease;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      border-radius: 50%;
+      transform-origin: center;
+
+      @include screen('lg') {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &_position {
+      &_1 {
+        left: 58%;
+        top: 35%;
+
+        @include screen('lg') {
+          left: 56%;
+          top: 33%;
+        }
+
+        @include screen('sm') {
+          left: 63%;
+          top: 28%;
+        }
+      }
+
+      &_2 {
+        left: 20%;
+        top: 44%;
+
+        @include screen('lg') {
+          left: 19%;
+          top: 41%;
+        }
+
+        @include screen('sm') {
+          left: 23%;
+          top: 38%;
+        }
+      }
+
+      &_3 {
+        left: 55.5%;
+        top: 50%;
+
+        @include screen('lg') {
+          left: 53.5%;
+          top: 47%;
+        }
+
+        @include screen('sm') {
+          left: 59.5%;
+          top: 43%;
+        }
+      }
+
+      &_4 {
+        left: 91%;
+        top: 39%;
+
+        @include screen('lg') {
+          left: 92%;
+          top: 38%;
+        }
+
+        @include screen('sm') {
+          left: 77%;
+          top: 40%;
+        }
+      }
+
+      &_5 {
+        left: 56.4%;
+        top: 59.5%;
+
+        @include screen('lg') {
+          left: 54.4%;
+          top: 57.5%;
+        }
+
+        @include screen('sm') {
+          left: 59.4%;
+          top: 53.5%;
+        }
+      }
+
+      &_6 {
+        left: 36%;
+        top: 65.5%;
+
+        @include screen('lg') {
+          left: 38%;
+          top: 61.5%;
+        }
+
+        @include screen('sm') {
+          left: 29%;
+          top: 56.5%;
+        }
+      }
+
+      &_7 {
+        left: 67%;
+        top: 62.5%;
+
+        @include screen('lg') {
+          left: 66%;
+          top: 60.5%;
+        }
+
+        @include screen('sm') {
+          left: 71%;
+          top: 61.5%;
+        }
+      }
+    }
+  }
+
+  @keyframes dot {
+    0% {
+      transform: translate3d(-50%, -50%, 0) scale(0);
+      opacity: 0;
+    }
+    75% {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 0;
+    }
+  }
+
+  &__tooltip {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 244px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid $color-red;
+    color: $color-grey;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    transition: opacity $ease-main;
+    z-index: 5;
+
+    @include screen('lg') {
+      font-size: 14px;
+      line-height: 16px;
+      width: 160px;
+      bottom: 10px;
+    }
+
+    #{$b}__dot:hover & {
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      top: 100%;
+      left: 50%;
+      background: white;
+      border: 2px solid $color-red;
+      transform: translate(-50%, -50%) rotate(45deg);
+      position: absolute;
+
+      @include screen('lg') {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background-color: white;
+      position: relative;
+      z-index: 2;
+      padding: 18px;
+      box-sizing: border-box;
+
+      @include screen('lg') {
+        padding: 15px;
+      }
+    }
+  }
+}

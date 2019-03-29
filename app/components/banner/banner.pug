@@ -1,6 +1,5 @@
-mixin banner(image, title)
+mixin banner(image, title, button)
   +b.banner&attributes(attributes)
-    +e.P.title!= title
-    block
-    +e.bg
     +e.IMG.image(src=image)
+    +e.P.title!= title
+    +button()(href="test.html").__button!= button

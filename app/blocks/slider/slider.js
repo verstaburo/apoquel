@@ -10,6 +10,25 @@ export default function slider() {
     w = $(window),
     dotsClass = '.dots';
 
+  // Слайдер статей
+  $('.js-banners-slider').each(function () {
+    const slider = new Swiper($(this), {
+      speed: 700,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: $(this).find(dotsClass),
+        clickable: true,
+        paginationClickableClass: 'advantages-slider__dots_clickable',
+        bulletClass: 'dots__dot',
+        bulletActiveClass: 'is-active',
+      },
+      simulateTouch: false,
+      roundLengths: true,
+      autoHeight: true,
+    });
+  });
+
   // Слайдер преимуществ
   $('.js-advantages-slider').each(function () {
     if (w.width() >= globalOptions.sizes.sm) return;
@@ -36,34 +55,46 @@ export default function slider() {
 
     const slider = new Swiper($(this), {
       speed: 700,
-      slidesPerView: 2,
-      spaceBetween: 24,
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      simulateTouch: false,
+      roundLengths: true,
+      breakpoints: {
+        768: {
+          spaceBetween: 12,
+        },
+      },
+    });
+  });
+
+  // Слайдер что вызываед зуд
+  $('.js-reason-slider').each(function () {
+    if (w.width() >= globalOptions.sizes.sm) return;
+
+    const slider = new Swiper($(this), {
+      speed: 700,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      simulateTouch: false,
+      roundLengths: true,
       pagination: {
         el: $(this).find(dotsClass),
         clickable: true,
         paginationClickableClass: 'advantages-slider__dots_clickable',
         bulletClass: 'dots__dot',
         bulletActiveClass: 'is-active',
-      },
-      simulateTouch: false,
-      roundLengths: true,
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 18,
-        },
       },
     });
   });
 
   // Слайдер вопросов и ответов
   $('.js-faq-slider').each(function () {
-    if (w.width() >= globalOptions.sizes.lg) return;
+    if (w.width() >= globalOptions.sizes.sm) return;
 
     const slider = new Swiper($(this), {
       speed: 700,
       slidesPerView: 'auto',
-      spaceBetween: 24,
+      spaceBetween: 0,
       pagination: {
         el: $(this).find(dotsClass),
         clickable: true,
@@ -73,12 +104,7 @@ export default function slider() {
       },
       simulateTouch: false,
       roundLengths: true,
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 18,
-        },
-      },
+      freeMode: true,
     });
   });
 

@@ -17,6 +17,15 @@
     background-color: rgba(76, 76, 76, .04);
   }
 
+  &_blue {
+    background-color: $color-blue-4;
+    color: white;
+
+    .section__title {
+      color: white;
+    }
+  }
+
   &_circles {
     background: url('../images/circles.svg') no-repeat right 26px;
 
@@ -110,6 +119,20 @@
         padding-bottom: 48px;
       }
     }
+
+    &_five {
+      padding-top: 48px;
+      padding-bottom: 72px;
+
+      @include screen('lg') {
+        padding-bottom: 38px;
+      }
+
+      @include screen('sm') {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+    }
   }
 
   &__faq-toggle {
@@ -119,58 +142,42 @@
   }
 
   &__description {
-    font-size: 18px;
-    line-height: 1.67;
+    font-size: 20px;
+    line-height: 1.5;
     text-align: center;
-    max-width: 1000px;
     margin: 0 auto;
+    font-weight: 600;
 
     @include screen('lg') {
-      font-size: 12px;
-      line-height: 1.84;
-      max-width: 670px;
+      font-size: 14px;
+      line-height: 1.14;
+      font-weight: 500;
     }
 
     @include screen('sm') {
-      line-height: 1.67;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
     &:not(:first-child) {
-      margin-top: 9px;
-
-      @include screen('lg') {
-        margin-top: 21px;
-      }
+      margin-top: 16px;
 
       @include screen('sm') {
-        margin-top: 12px;
+        margin-top: 8px;
       }
     }
   }
 
   &_line {
+    padding: 86px 0;
+    border-top: 1px solid $color-grey-5;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 15px;
-      left: 0;
-      width: 100%;
-      height: 129px;
-      background-image: url('../images/line.svg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      z-index: -1;
+    @include screen('lg') {
+      padding: 64px 0;
+    }
 
-      @include screen('lg') {
-        height: 94px;
-        bottom: 49px;
-      }
-
-      @include screen('sm') {
-        height: 43px;
-        bottom: 20px;
-      }
+    @include screen('sm') {
+      padding: 32px 0;
     }
   }
 
@@ -211,10 +218,70 @@
     margin-left: auto;
     margin-right: auto;
 
+    &_has-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .section__title {
+        flex: 1;
+        margin-right: 32px;
+        text-align: left;
+
+        @include screen('lg') {
+          margin-right: 0;
+          text-align: center;
+        }
+      }
+
+      .button {
+        margin-left: auto;
+        flex-shrink: 0;
+        margin-top: 0;
+      }
+    }
+
     &_width {
 
       &_one {
         max-width: 760px;
+      }
+    }
+  }
+
+  &__text-block {
+    &:not(:first-child) {
+      margin-top: 40px;
+
+      @include screen('lg') {
+        margin-top: 32px;
+      }
+
+      @include screen('sm') {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: $color-grey-3;
+
+    @include screen('sm') {
+      font-size: 12px;
+      line-height: 18px;
+      max-width: 240px;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin-top: 3px;
+
+        @include screen('sm') {
+          margin-top: 4px;
+        }
       }
     }
   }
@@ -306,6 +373,34 @@
 
           @include screen('sm') {
             margin-top: 14px;
+          }
+        }
+      }
+
+      &_six {
+        &:not(:first-child) {
+          margin-top: 39px;
+
+          @include screen('lg') {
+            margin-top: 46px;
+          }
+
+          @include screen('sm') {
+            margin-top: 24px;
+          }
+        }
+      }
+
+      &_seven {
+        &:not(:first-child) {
+          margin-top: 68px;
+
+          @include screen('lg') {
+            margin-top: 32px;
+          }
+
+          @include screen('sm') {
+            margin-top: 23px;
           }
         }
       }
