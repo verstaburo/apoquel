@@ -41,6 +41,128 @@
             </nav><a class="button header__mobilebutton" href="test.html">Где купить</a>
         </div>
     </div>
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Подбери правильную дозировку</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="section section_padding_two">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Подбери правильную дозировку</h2>
+                <div class="section__description">
+                    <p>Препарат будет действовать в случае правильно подобранной дозировки.</p>
+                    <p>Не снижайте ее без консультации с врачом!</p>
+                </div>
+            </div>
+            <div class="section__content section__content_margin_six">
+                <div class="products">
+                    <div class="products__dogs">
+                        <div class="products__item" data-product-type="1" data-product-subtype="1">
+                            <div class="products__icon products__icon_dog_1"></div>
+                            <div class="products__weight"><span>3 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="2" data-product-subtype="1">
+                            <div class="products__icon products__icon_dog_2"></div>
+                            <div class="products__weight"><span>4,5 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="1" data-product-subtype="2">
+                            <div class="products__icon products__icon_dog_3"></div>
+                            <div class="products__weight"><span>6 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="2" data-product-subtype="2">
+                            <div class="products__icon products__icon_dog_4"></div>
+                            <div class="products__weight"><span>9 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="3" data-product-subtype="1">
+                            <div class="products__icon products__icon_dog_5"></div>
+                            <div class="products__weight"><span>13,5 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="2" data-product-subtype="3">
+                            <div class="products__icon products__icon_dog_6"></div>
+                            <div class="products__weight"><span>20 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="3" data-product-subtype="2">
+                            <div class="products__icon products__icon_dog_7"></div>
+                            <div class="products__weight"><span>27 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="3" data-product-subtype="3">
+                            <div class="products__icon products__icon_dog_8"></div>
+                            <div class="products__weight"><span>40 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="3" data-product-subtype="4">
+                            <div class="products__icon products__icon_dog_9"></div>
+                            <div class="products__weight"><span>55 кг</span></div>
+                        </div>
+                        <div class="products__item" data-product-type="3" data-product-subtype="4">
+                            <div class="products__icon products__icon_dog_10"></div>
+                            <div class="products__weight"><span>80 кг</span></div>
+                        </div>
+                    </div>
+                    <div class="products__slider" id="product-slider"></div><select class="products__select js-product-select">
+                        <option value="3 кг" data-product-type="1" data-product-subtype="1">3 кг</option>
+                        <option value="4,5 кг" data-product-type="2" data-product-subtype="1">4,5 кг</option>
+                        <option value="6 кг" data-product-type="1" data-product-subtype="2">6 кг</option>
+                        <option value="9 кг" data-product-type="2" data-product-subtype="2">9 кг</option>
+                        <option value="13,5 кг" data-product-type="3" data-product-subtype="1">13,5 кг</option>
+                        <option value="20 кг" data-product-type="2" data-product-subtype="3">20 кг</option>
+                        <option value="27 кг" data-product-type="3" data-product-subtype="2">27 кг</option>
+                        <option value="40 кг" data-product-type="3" data-product-subtype="3">40 кг</option>
+                        <option value="55 кг" data-product-type="3" data-product-subtype="4">55 кг</option>
+                        <option value="80 кг" data-product-type="3" data-product-subtype="4">80 кг</option>
+                    </select>
+                    <div class="products__meds">
+                        <!-- Тип товара 1-->
+                        <div class="products__med is-active" data-product-type="1">
+                            <div class="products__image"><img class="products__product-image" src="assets/images/meds_1.jpg" alt="" role="presentation" />
+                                <div class="products__tablets"><img class="products__tablet is-active" src="assets/images/tablet_1_1.png" data-product-subtype="1" alt="" role="presentation" /><img class="products__tablet" src="assets/images/tablet_1_2.png" data-product-subtype="2" alt="" role="presentation" /></div>
+                            </div>
+                            <div class="products__texts">
+                                <h4 class="products__title">АПОКВЕЛ 3,6 мг</h4>
+                                <p class="products__text">по 20 или 100 таблеток во флаконе</p>
+                                <div class="products__descriptions">
+                                    <div class="products__description is-active" data-product-subtype="1">Применяйте по 1/2 таблетки 2 раза в день 14 дней, далее 1 раз в день</div>
+                                    <div class="products__description" data-product-subtype="2">Применяйте по 1 таблетке 2 раза в день 14 дней, далее 1 раз в день</div>
+                                </div>
+                            </div>
+                        </div><!-- Тип товара 2-->
+                        <div class="products__med" data-product-type="2">
+                            <div class="products__image"><img class="products__product-image" src="assets/images/meds_2.jpg" alt="" role="presentation" />
+                                <div class="products__tablets"><img class="products__tablet" src="assets/images/tablet_2_1.png" data-product-subtype="1" alt="" role="presentation" /><img class="products__tablet" src="assets/images/tablet_2_2.png" data-product-subtype="2" alt="" role="presentation" /><img class="products__tablet" src="assets/images/tablet_2_3.png" data-product-subtype="3" alt="" role="presentation" /></div>
+                            </div>
+                            <div class="products__texts">
+                                <h4 class="products__title">АПОКВЕЛ 5,4 мг</h4>
+                                <p class="products__text">по 20 или 100 таблеток во флаконе</p>
+                                <div class="products__descriptions">
+                                    <div class="products__description" data-product-subtype="1">Применяйте по 1/2 таблетки 2 раза в день 14 дней, далее 1 раз в день</div>
+                                    <div class="products__description" data-product-subtype="2">Применяйте по 1 таблетке 2 раза в день 14 дней, далее 1 раз в день</div>
+                                    <div class="products__description" data-product-subtype="3">Применяйте по 2 таблетки 2 раза в день 14 дней, далее 1 раз в день</div>
+                                </div>
+                            </div>
+                        </div><!-- Тип товара 3-->
+                        <div class="products__med" data-product-type="3">
+                            <div class="products__image"><img class="products__product-image" src="assets/images/meds_2.jpg" alt="" role="presentation" />
+                                <div class="products__tablets"><img class="products__tablet" src="assets/images/tablet_3_1.png" data-product-subtype="1" alt="" role="presentation" /><img class="products__tablet" src="assets/images/tablet_3_2.png" data-product-subtype="2" alt="" role="presentation" /><img class="products__tablet" src="assets/images/tablet_3_3.png" data-product-subtype="3" alt="" role="presentation" /><img class="products__tablet" src="assets/images/tablet_3_4.png" data-product-subtype="4" alt="" role="presentation" /></div>
+                            </div>
+                            <div class="products__texts">
+                                <h4 class="products__title">АПОКВЕЛ 16 мг</h4>
+                                <p class="products__text">по 20 или 100 таблеток во флаконе</p>
+                                <div class="products__descriptions">
+                                    <div class="products__description" data-product-subtype="1">Применяйте по 1/2 таблетки 2 раза в день 14 дней, далее 1 раз в день</div>
+                                    <div class="products__description" data-product-subtype="2">Применяйте по 1 таблетке 2 раза в день 14 дней, далее 1 раз в день</div>
+                                    <div class="products__description" data-product-subtype="3">Применяйте по 2 таблетки 2 раза в день 14 дней, далее 1 раз в день</div>
+                                    <div class="products__description" data-product-subtype="4">Применяйте по 2 таблетки 2 раза в день 14 дней, далее 1 раз в день</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="video-block">
         <div class="container">
             <div class="video-block__container">
