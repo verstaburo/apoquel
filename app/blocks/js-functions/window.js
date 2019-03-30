@@ -3,7 +3,7 @@ const $ = window.$;
 const globalOptions = window.globalOptions;
 
 export default function windowResize() {
-  const breakpoints = [globalOptions.sizes.sm, 480, globalOptions.sizes.lg];
+  const breakpoints = [globalOptions.sizes.sm, 480, 768];
   const breakpointsName = ['mobile', 'mobileBig', 'tablet', 'desktop'];
 
   function checkbp() {
@@ -18,16 +18,18 @@ export default function windowResize() {
   }
 
   let breakpointLoaded = checkbp();
-  let breakpointCurrent;
-  let metaTag;
+  let breakpointCurrent = checkbp();
 
-  if (breakpointLoaded === 'mobile') {
-    $(document).find('[name="viewport"]').attr('content', 'width=320');
+  function metaTag () {
+    let wWidth = 768;
+
+    if (breakpointCurrent === 'mobile') wWidth = 320;
+    if (breakpointCurrent === 'mobileBig') wWidth = 480;
+
+    $(document).find('[name="viewport"]').attr('content', `width=${wWidth}`);
   }
 
-  if (breakpointLoaded === 'mobileBig') {
-    $(document).find('[name="viewport"]').attr('content', 'width=480');
-  }
+  metaTag();
 
   $(window).resize(function () {
     breakpointCurrent = checkbp();

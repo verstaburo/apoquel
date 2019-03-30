@@ -42,6 +42,7 @@
   }
 
   &_articles {
+
     .swiper-slide {
       @include screen('lg') {
         width: 291px;
@@ -98,13 +99,12 @@
 
 .js-faq-slider.swiper-container-horizontal {
   @include screen('sm') {
-    .swiper-slide {
-      &:first-child {
-        width: 726px;
-      }
 
-      &:last-child {
-        width: 242px;
+    .swiper-slide {
+      width: 230px;
+      min-width: 60vw;
+
+      &:not(:first-child) {
         margin-left: 12px;
       }
     }

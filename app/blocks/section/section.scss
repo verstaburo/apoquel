@@ -249,6 +249,7 @@
   }
 
   &__text-block {
+
     &:not(:first-child) {
       margin-top: 40px;
 
@@ -275,6 +276,7 @@
     }
 
     p {
+
       &:not(:first-child) {
         margin-top: 3px;
 
@@ -377,6 +379,7 @@
       }
 
       &_six {
+
         &:not(:first-child) {
           margin-top: 39px;
 
@@ -391,6 +394,7 @@
       }
 
       &_seven {
+
         &:not(:first-child) {
           margin-top: 68px;
 

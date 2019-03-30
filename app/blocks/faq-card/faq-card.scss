@@ -25,6 +25,16 @@
     margin-bottom: 0 !important;
   }
 
+  &_big {
+    @include screen('sm', min) {
+      min-height: 317px;
+    }
+
+    @include screen('lg', min) {
+      min-height: 536px;
+    }
+  }
+
   &:hover, &.is-active {
     opacity: .3;
   }
@@ -40,6 +50,7 @@
   $b: &;
 
   &_color {
+
     &_1 {
       background-color: $color-blue-5;
     }

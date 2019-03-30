@@ -46,15 +46,13 @@ block content
       +slider().slider_faq.js-faq-slider
         +grid.grid_size_six.faq-grid.swiper-wrapper
           +col({xl: 8, sm: 12}).grid__col_grow.swiper-slide
-            +grid.grid_size_six
-              +col({xl: 12, sm: 4}).grid__col_grow
-                +faq-card('assets/images/dog_1.png', 'Как определить, что у моей собаки зуд является проблемой?')(data-faq-card="1" href="faq.html").js-faq-card
-              +col({xl: 6, sm: 4}).grid__col_grow
-                +faq-card('assets/images/dog_2.png', 'Что такое аллергический дерматит?')(data-faq-card="2" href="faq.html")._color_1.js-faq-card
-              +col({xl: 6, sm: 4}).grid__col_grow
-                +faq-card('assets/images/dog_3.png', 'Существуют ли ограничения в применении Апоквел?')(data-faq-card="3" href="faq.html")._color_2.js-faq-card
+            +faq-card('assets/images/dog_1.png', 'Как определить, что у моей собаки зуд является проблемой?')(data-faq-card="1").js-faq-card
+          +col({xl: 4, sm: 12}).grid__col_grow.grid__col_right.swiper-slide
+            +faq-card('assets/images/dog_4.png', 'Что такое атопический дерматит и каковы симптомы болезни?')(data-faq-card="4")._color_3._big._vertical.js-faq-card
           +col({xl: 4, sm: 12}).grid__col_grow.swiper-slide
-            +faq-card('assets/images/dog_4.png', 'Что такое атопический дерматит и каковы симптомы болезни?')(data-faq-card="4" href="faq.html")._color_3._vertical.js-faq-card
+            +faq-card('assets/images/dog_2.png', 'Что такое аллергический дерматит?')(data-faq-card="2")._color_1.js-faq-card
+          +col({xl: 4, sm: 12}).grid__col_grow.swiper-slide
+            +faq-card('assets/images/dog_3.png', 'Существуют ли ограничения в применении Апоквел?')(data-faq-card="3")._color_2.js-faq-card
     +section-footer._margin_one.hide-desktop
       +button()(href="faq.html") Посмотреть все
 
