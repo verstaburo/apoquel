@@ -143,14 +143,13 @@
 
   &__description {
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 26px;
     text-align: center;
     margin: 0 auto;
-    font-weight: 600;
 
     @include screen('lg') {
-      font-size: 14px;
-      line-height: 1.14;
+      font-size: 18px;
+      line-height: 26px;
       font-weight: 500;
     }
 

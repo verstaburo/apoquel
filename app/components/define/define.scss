@@ -121,6 +121,7 @@
     height: 100%;
     z-index: 1;
     transform: translateX(-50%);
+    pointer-events: none;
 
     &_dots {
       background: none !important;
@@ -172,6 +173,7 @@
     border-radius: 50%;
     z-index: 3;
     cursor: pointer;
+    pointer-events: all;
 
     @include screen('lg') {
       width: 4px;

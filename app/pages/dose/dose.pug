@@ -4,6 +4,17 @@ block head
   - var pageTitle = 'Апоквел | Подбери дозировку'
 
 block content
+  +breadcrumbs(['Главная', 'Подбери правильную дозировку'])
+
+  +section._padding_two
+    +section-header('Подбери правильную дозировку')
+      +e.description
+        p Препарат будет действовать в случае правильно подобранной дозировки.
+        p Не снижайте ее без консультации с врачом!
+
+    +section-content._margin_six
+      +products
+
   +video-block('assets/video/video.mp4', 'assets/images/poster.jpg', 'Как действует Апоквел?')
 
   +section._blue._padding_five

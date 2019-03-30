@@ -1,24 +1,62 @@
 mixin products()
   +b.products&attributes(attributes)
-    .container
-      +e.SELECT.select.js-product-select
-        each dog in getData('dogs')
-          - var isSelected = !!dog[2];
-          option(value=dog[1] selected=isSelected)!= dog[1]
-
-      +e.navigation
-        each dog in getData('dogs')
-          - var activeClass = dog[2] ? 'is-active' : '';
-          +e.DIV.button(class=activeClass).js-dog-button
-            +e.IMG.dog(src=dog[0])
-            +e.P.weight!= dog[1]
-            +icon('dog-bg').__icon
-
-    +e.products
+    +e.dogs
       each product in getData('products')
-        - var modificator = product[3];
-        - var activeClass = product[4] ? ' is-active' : '';
-        +e.item(class=activeClass)
-          +e.wrapper
-            +product(product[0], product[1], product[2])(class=modificator + activeClass).__product.js-dog-button
+        +e.item(data-product-type=product.type, data-product-subtype=product.subtype)
+          +e.icon(class=product.iconClass)
+          +e.weight
+            span!= product.weight
+    +e.slider#product-slider
 
+    +e.SELECT.select().js-product-select
+      each product in getData('products')
+        option(value=product.weight data-product-type=product.type, data-product-subtype=product.subtype)!= product.weight
+
+    +e.meds
+      // Тип товара 1
+      +e.med(data-product-type="1").is-active
+        +e.image
+          +e.IMG.product-image(src="assets/images/meds_1.jpg")
+          +e.tablets
+            +e.IMG.tablet(src="assets/images/tablet_1_1.png" data-product-subtype="1").is-active
+            +e.IMG.tablet(src="assets/images/tablet_1_2.png" data-product-subtype="2")
+        +e.texts
+          +e.H4.title АПОКВЕЛ 3,6 мг
+          +e.P.text по 20 или 100 таблеток во флаконе
+          +e.descriptions
+            +e.description(data-product-subtype="1").is-active Применяйте по 1/2 таблетки 2 раза в день 14 дней, далее 1 раз в день
+            +e.description(data-product-subtype="2") Применяйте по 1 таблетке 2 раза в день 14 дней, далее 1 раз в день
+
+      // Тип товара 2
+      +e.med(data-product-type="2")
+        +e.image
+          +e.IMG.product-image(src="assets/images/meds_2.jpg")
+          +e.tablets
+            +e.IMG.tablet(src="assets/images/tablet_2_1.png" data-product-subtype="1")
+            +e.IMG.tablet(src="assets/images/tablet_2_2.png" data-product-subtype="2")
+            +e.IMG.tablet(src="assets/images/tablet_2_3.png" data-product-subtype="3")
+        +e.texts
+          +e.H4.title АПОКВЕЛ 5,4 мг
+          +e.P.text по 20 или 100 таблеток во флаконе
+          +e.descriptions
+            +e.description(data-product-subtype="1") Применяйте по 1/2 таблетки 2 раза в день 14 дней, далее 1 раз в день
+            +e.description(data-product-subtype="2") Применяйте по 1 таблетке 2 раза в день 14 дней, далее 1 раз в день
+            +e.description(data-product-subtype="3") Применяйте по 2 таблетки 2 раза в день 14 дней, далее 1 раз в день
+
+      // Тип товара 3
+      +e.med(data-product-type="3")
+        +e.image
+          +e.IMG.product-image(src="assets/images/meds_2.jpg")
+          +e.tablets
+            +e.IMG.tablet(src="assets/images/tablet_3_1.png" data-product-subtype="1")
+            +e.IMG.tablet(src="assets/images/tablet_3_2.png" data-product-subtype="2")
+            +e.IMG.tablet(src="assets/images/tablet_3_3.png" data-product-subtype="3")
+            +e.IMG.tablet(src="assets/images/tablet_3_4.png" data-product-subtype="4")
+        +e.texts
+          +e.H4.title АПОКВЕЛ 16 мг
+          +e.P.text по 20 или 100 таблеток во флаконе
+          +e.descriptions
+            +e.description(data-product-subtype="1") Применяйте по 1/2 таблетки 2 раза в день 14 дней, далее 1 раз в день
+            +e.description(data-product-subtype="2") Применяйте по 1 таблетке 2 раза в день 14 дней, далее 1 раз в день
+            +e.description(data-product-subtype="3") Применяйте по 2 таблетки 2 раза в день 14 дней, далее 1 раз в день
+            +e.description(data-product-subtype="4") Применяйте по 2 таблетки 2 раза в день 14 дней, далее 1 раз в день

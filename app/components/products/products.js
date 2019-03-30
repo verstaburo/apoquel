@@ -1,44 +1,66 @@
 /* eslint-disable */
 const $ = window.$;
 
+import noUiSlider from 'nouislider';
+
 export default function products() {
-  const
-    buttonClass = '.js-dog-button',
-    productClass = '.product',
-    itemClass = '.products__item',
-    sectionClass = '.products',
-    productsClass = '.products__products',
-    navClass = '.products__navigation',
-    activeClass = 'is-active';
+  if (!$(document).find('.products').length) return;
 
-  $(buttonClass).click(function () {
-    if ($(this).hasClass(activeClass)) return;
+  // Слайдер
+  const slider = document.getElementById('product-slider');
 
-    const
-      el = $(this),
-      section = el.parents(sectionClass),
-      elItem = el.parents(itemClass),
-      products = el.parents(productsClass),
-      nav = section.find(navClass),
-      index = elItem.length > 0 ? elItem.index() : el.index(),
-      item = section.find(`${itemClass}:eq(${index})`);
-
-    section.find(`.${activeClass}`).removeClass(activeClass);
-
-    products.find(`${buttonClass}:eq(${index})`).addClass(activeClass);
-    item.addClass(activeClass).find(productClass).addClass(activeClass);
-
-    nav.find(`${buttonClass}:eq(${index})`).addClass(activeClass);
+  noUiSlider.create(slider, {
+    start: 1,
+    range: {
+      'min': 1,
+      'max': 10
+    }
   });
 
-  $('.js-product-select').change(function () {
+  slider.noUiSlider.on('update', function (values, handle, unencoded, tap, positions) {
     const
-      el = $(this),
-      selectIndex = el[0].selectedIndex,
-      section = el.parents(sectionClass),
-      item = section.find(`${itemClass}:eq(${selectIndex}) ${productClass}`);
+      value = Math.round(values[0]),
+      button= $(document).find(`.products__item:eq(${value - 1})`),
+      type = button.data('product-type'),
+      subtype = button.data('product-subtype'),
+      product = $(document).find(`.products__med[data-product-type="${type}"]`),
+      tablet = product.find(`.products__tablet[data-product-subtype="${subtype}"]`),
+      description = product.find(`.products__description[data-product-subtype="${subtype}"]`);
 
-    item[0].click();
+    button.addClass('is-active').siblings().removeClass('is-active');
+    product.addClass('is-active').siblings().removeClass('is-active');
+    tablet.addClass('is-active').siblings().removeClass('is-active');
+    description.addClass('is-active').siblings().removeClass('is-active');
+  });
+
+  slider.noUiSlider.on('change', function (values, handle, unencoded, tap, positions) {
+    const
+      value = Math.round(values[0]);
+
+    slider.noUiSlider.set(value);
+  });
+
+  // Клик по собаке
+  $(document).on('click', '.products__item', function () {
+    const
+      button = $(this),
+      type = button.data('product-type'),
+      subtype = button.data('product-subtype'),
+      product = $(document).find(`.products__med[data-product-type="${type}"]`),
+      tablet = product.find(`.products__tablet[data-product-subtype="${subtype}"]`),
+      description = product.find(`.products__description[data-product-subtype="${subtype}"]`);
+
+    button.addClass('is-active').siblings().removeClass('is-active');
+    product.addClass('is-active').siblings().removeClass('is-active');
+    tablet.addClass('is-active').siblings().removeClass('is-active');
+    description.addClass('is-active').siblings().removeClass('is-active');
+    slider.noUiSlider.set(button.index() + 1);
+  });
+
+  // Селект
+  $(document).on('change', '.js-product-select', function () {
+    const option = $(this).find('option:selected');
+    $(document).find(`.products__item:eq(${option.index()})`).click();
   });
 }
 /* eslint-enable */

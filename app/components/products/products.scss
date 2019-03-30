@@ -1,207 +1,412 @@
+@import url('../../node_modules/nouislider/distribute/nouislider.min.css');
+
 .products {
   display: block;
+  position: relative;
 
   $b: &;
 
-  &__select {
-    width: 120px;
-    border: 2px solid $color-yellow;
-    border-radius: 100px;
-    display: block;
-    margin: 0 auto;
-    appearance: none;
-    color: $color-grey;
-    line-height: 24px;
-    height: 28px;
-    padding: 0 30px 0 10px;
-    font-weight: 600;
-    background-size: 11px 7px;
-    background-repeat: no-repeat;
-    background-image: url('../images/arrow.svg');
-    background-position: right 7px center;
+  &__dogs {
+    display: flex;
+    justify-content: space-between;
 
-    @include screen('sm', min) {
+    @include screen('sm') {
       display: none;
     }
   }
 
-  &__navigation {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    margin: 0 75px;
+  &__item {
+    text-align: center;
+    cursor: pointer;
+    width: 90px;
 
     @include screen('lg') {
-      margin: 0 -12px;
+      width: 60px;
+    }
+  }
+
+  &__weight {
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-blue;
+    transition: color $ease-main;
+    font-family: $font-second;
+    font-variant-numeric: lining-nums;
+
+    @include screen('lg') {
+      font-size: 16px;
+    }
+
+    #{$b}__item:hover & {
+      color: $color-red;
+    }
+
+    #{$b}__item.is-active & {
+      font-size: 25px;
+      font-weight: 900;
+      color: $color-grey;
+
+      @include screen('lg') {
+        font-size: 20px;
+      }
+
+      span {
+        border-color: transparent;
+      }
+    }
+
+    span {
+      border-bottom: 1px dotted;
+      transition: border-color $ease-main;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 13px;
+      background: #c6c6c6;
+      margin: 0 auto 10px;
+
+      @include screen('lg') {
+        height: 11px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__icon {
+    font-family: 'fontello';
+    height: 60px;
+    font-size: 38px;
+    display: flex;
+    align-items: flex-end;
+    color: #bdbdbd;
+    transition: color $ease-main;
+    margin-bottom: 40px;
+    justify-content: center;
+
+    @include screen('lg') {
+      transform-origin: center bottom;
+      transform: scale(.7);
+      margin-bottom: 32px;
+    }
+
+    #{$b}__item:hover & {
+      color: $color-red;
+    }
+
+    #{$b}__item.is-active & {
+      color: $color-main;
+    }
+
+    &_dog {
+      &_1 {
+        font-size: 38px;
+        &::before { content: '\e826'; }
+      }
+
+      &_2 {
+        font-size: 35px;
+        &::before { content: '\e824'; }
+      }
+
+      &_3 {
+        font-size: 43px;
+        &::before { content: '\e825'; }
+      }
+
+      &_4 {
+        font-size: 41px;
+        &::before { content: '\e823'; }
+      }
+
+      &_5 {
+        font-size: 47px;
+        &::before { content: '\e81d'; }
+      }
+
+      &_6 {
+        font-size: 50px;
+        &::before { content: '\e822'; }
+      }
+
+      &_7 {
+        font-size: 55px;
+        &::before { content: '\e820'; }
+      }
+
+      &_8 {
+        font-size: 52px;
+        &::before { content: '\e821'; }
+      }
+
+      &_9 {
+        font-size: 58px;
+        &::before { content: '\e81f'; }
+      }
+
+      &_10 {
+        font-size: 59px;
+        &::before { content: '\e81e'; }
+      }
+    }
+  }
+
+  &__slider {
+    background: #ededed;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+    height: 10px;
+    position: absolute;
+    left: 45px;
+    right: 45px;
+    top: 75px;
+
+    @include screen('lg') {
+      left: 30px;
+      right: 30px;
+      height: 6px;
     }
 
     @include screen('sm') {
       display: none;
     }
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 22px;
-      height: 7px;
-      left: 100 / 12 * 1%;
-      right: 100 / 12 * 1%;
-      background-color: $color-grey-light-2;
-      border-radius: 100px;
+    .noUi-handle {
+      background: $color-red;
+      border: none;
+      border-radius: 100%;
+      box-shadow: none;
+      cursor: pointer;
+      height: 30px;
+      right: -15px !important;
+      top: -10px;
+      width: 30px;
+      right: auto;
+      left: auto;
 
       @include screen('lg') {
+        height: 20px;
+        width: 20px;
+        right: -10px !important;
+        top: -7px;
+      }
+
+      &::before, &::after {
         display: none;
       }
     }
   }
 
-  &__button {
-    width: 100/6 * 1%;
+  // Продукты
+  &__meds {
+    display: flex;
+    margin: 60px -10px 0;
+
+    @include screen('lg') {
+      margin-top: 36px;
+    }
+  }
+
+  &__med {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 0 10px;
     text-align: center;
-    z-index: 2;
-    position: relative;
-    cursor: pointer;
+    transition: opacity $ease-main;
+    opacity: .5;
 
-    @include screen('lg') {
-      padding: 0 12px;
-    }
-  }
-
-  &__dog {
-    @include screen('lg') {
+    @include screen('sm') {
       display: none;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    left: 50%;
-    bottom: -29px;
-    z-index: -1;
-    fill: transparent;
-    stroke: $color-yellow;
-    height: 167px;
-    opacity: 0;
-    transition: opacity $ease-main, fill $ease-main, transform $ease-main;
-    pointer-events: none;
-    transform: translateX(-50%) scale(.9);
-
-    @include screen('lg') {
-      display: none;
-    }
-
-    #{$b}__button:hover &, #{$b}__button.is-active & {
-      opacity: 1;
-      transform: translateX(-50%) scale(1);
-    }
-
-    #{$b}__button.is-active & {
-      fill: $color-yellow;
-    }
-  }
-
-  &__weight {
-    font-size: 14px;
-    line-height: 1;
-    margin-top: 28px;
-    color: $color-grey-2;
-    transition: color $ease-main;
-
-    @include screen('lg') {
-      margin-top: 0;
-      line-height: 39px;
-      font-family: $font-second;
-      padding: 0 5px;
-      border-radius: 100px;
-      background-color: $color-yellow;
-      color: white;
-      transition: background-color $ease-main;
-    }
-
-    #{$b}__button.is-active & {
-      color: white;
-
-      @include screen('lg') {
-        background-color: $color-main;
-      }
-    }
-  }
-
-  &__products {
-    position: relative;
-
-    &:not(:first-child) {
-      margin-top: 138px;
-
-      @include screen('lg') {
-        margin-top: 132px;
-      }
-
-      @include screen('sm') {
-        margin-top: 100px;
-      }
-    }
-  }
-
-  &__item {
-    width: 100%;
-    position: relative;
-    transform-origin: left center;
-    pointer-events: none;
-    transition: transform $ease-main, opacity $ease-main;
-
-    &:not(:first-child) {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-
-    @include screen('lg') {
-      transform: translate3d(0, 0, 0) !important;
-      opacity: 0;
+      width: 100%;
     }
 
     &.is-active {
-      @include screen('lg') {
-        opacity: 1;
-      }
-    }
+      opacity: 1;
 
-    @for $i from 1 through 10 {
-
-      &:nth-child(#{$i}) {
-        z-index: #{10 - $i};
-      }
-    }
-
-    @for $i from 1 through 6 {
-
-      &:nth-child(#{$i}) {
-
-        &:not(.is-active) {
-          transform: translate3d(#{-18.4% + 13.6% * ($i - 1)}, 0, 0);
-        }
-
-        &.is-active {
-          transform: translate3d(#{13.6% * ($i - 1)}, 0, 0);
-        }
-      }
-
-      &.is-active ~ &:nth-child(#{$i}) {
-        transform: translate3d(#{100% - 32% - 13.6% * (6 - $i)}, 0, 0);
+      @include screen('sm') {
+        display: block;
       }
     }
   }
 
-  &__product {
-    width: 32%;
+  &__image {
+    height: 325px;
+    position: relative;
+    width: 100%;
 
     @include screen('lg') {
-      width: 100%;
+      height: 253px;
+    }
+
+    @include screen('sm') {
+      height: 223px;
     }
   }
 
-  &__wrapper {
+  &__select {
+    @include screen('sm', min) {
+      display: none;
+    }
 
+    height: 28px;
+    box-sizing: border-box;
+    appearance: none;
+    width: 85px;
+    padding: 0 10px;
+    border: 2px solid $color-red-2;
+    color: $color-grey;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+    background: url('../images/select-arrow.svg') right 10px center no-repeat;
+  }
+
+  &__product-image {
+    position: absolute;
+    left: -83px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    transition: transform $ease-main;
+    transform: scale(.8);
+    transform-origin: center bottom;
+
+    @include screen('lg') {
+      left: -60px;
+    }
+
+    @include screen('sm') {
+      left: -58px;
+    }
+
+    #{$b}__med.is-active & {
+      transform: scale(1);
+    }
+  }
+
+  &__tablets {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(80px);
+    width: 113px;
+
+    @include screen('lg') {
+      transform: translateX(70px);
+      width: 89px;
+    }
+
+    @include screen('sm') {
+      transform: translateX(60px);
+      width: 74px;
+      bottom: 10px;
+    }
+  }
+
+  &__tablet {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity $ease-main;
+    pointer-events: none;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 900;
+    font-family: $font-second;
+    font-variant-numeric: lining-nums;
+    margin-top: 20px;
+
+    @include screen('lg') {
+      font-size: 17px;
+    }
+
+    @include screen('sm') {
+      font-size: 15px;
+      margin-top: 17px;
+    }
+  }
+
+  &__texts {
+    @include screen('lg') {
+      margin-top: -20px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 8px;
+
+    @include screen('lg') {
+      font-size: 13px;
+      margin-top: 2px;
+    }
+  }
+
+  &__descriptions {
+    display: none;
+    padding: 18px 40px 20px;
+    background-color: $color-blue-8;
+    position: relative;
+    margin-top: 25px;
+    border-radius: 12px;
+
+    @include screen('lg') {
+      margin-top: 19px;
+      padding: 13px 16px 10px;
+    }
+
+    &::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-color: inherit;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      @include screen('lg') {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    #{$b}__med.is-active & {
+      display: block;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+    color: white;
+    display: none;
+
+    @include screen('lg') {
+      font-size: 12px;
+    }
+
+    &.is-active {
+      display: block;
+    }
   }
 }

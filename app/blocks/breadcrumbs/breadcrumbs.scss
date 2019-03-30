@@ -1,22 +1,39 @@
 .breadcrumbs {
   display: block;
-  padding: 5px 0;
   position: relative;
   z-index: 2;
+  width: 100%;
+
+  &_fixed {
+    height: 0;
+  }
 
   $b: &;
+
+  .container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 
   @include screen('sm') {
     display: none;
   }
 
   &_blue {
-    padding: 3px 0;
     background-color: $color-blue-2;
 
-    @include screen('lg') {
-      padding: 2px 0;
+    .container {
+      padding-top: 3px;
+      padding-bottom: 3px;
 
+      @include screen('lg') {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+    }
+
+
+    @include screen('lg') {
       .breadcrumbs__item {
         font-size: 10px;
       }
@@ -75,11 +92,4 @@
       pointer-events: none;
     }
   }
-}
-
-.breadcrumbs-wrap {
-  height: 0;
-  width: 100%;
-  position: relative;
-  z-index: 2;
 }

@@ -1,39 +1,62 @@
 [
-  [
-    "assets/images/product_1.jpg",
-    "Симпарика 5 мг",
-    "Для собак массой 1,3-2,5 кг",
-    "_yellow",
-    true
-  ],
-  [
-    "assets/images/product_2.jpg",
-    "Симпарика 10 мг",
-    "Для собак массой 2,6-5,0 кг",
-    "_purple"
-  ],
-  [
-    "assets/images/product_3.jpg",
-    "Симпарика 20 мг",
-    "Для собак массой 5,1-10,0 кг",
-    "_orange"
-  ],
-  [
-    "assets/images/product_4.jpg",
-    "Симпарика 40 мг",
-    "Для собак массой 10,1-20,0 кг",
-    "_blue"
-  ],
-  [
-    "assets/images/product_5.jpg",
-    "Симпарика 80 мг",
-    "Для собак массой 20,1-40,0 кг",
-    "_green"
-  ],
-  [
-    "assets/images/product_6.jpg",
-    "Симпарика 120 мг",
-    "Для собак массой 40,1-60,0 кг",
-    "_brown"
-  ]
+  {
+    "iconClass": "_dog_1",
+    "weight": "3 кг",
+    "type": 1,
+    "subtype": 1
+  },
+  {
+    "iconClass": "_dog_2",
+    "weight": "4,5 кг",
+    "type": 2,
+    "subtype": 1
+  },
+  {
+    "iconClass": "_dog_3",
+    "weight": "6 кг",
+    "type": 1,
+    "subtype": 2
+  },
+  {
+    "iconClass": "_dog_4",
+    "weight": "9 кг",
+    "type": 2,
+    "subtype": 2
+  },
+  {
+    "iconClass": "_dog_5",
+    "weight": "13,5 кг",
+    "type": 3,
+    "subtype": 1
+  },
+  {
+    "iconClass": "_dog_6",
+    "weight": "20 кг",
+    "type": 2,
+    "subtype": 3
+  },
+  {
+    "iconClass": "_dog_7",
+    "weight": "27 кг",
+    "type": 3,
+    "subtype": 2
+  },
+  {
+    "iconClass": "_dog_8",
+    "weight": "40 кг",
+    "type": 3,
+    "subtype": 3
+  },
+  {
+    "iconClass": "_dog_9",
+    "weight": "55 кг",
+    "type": 3,
+    "subtype": 4
+  },
+  {
+    "iconClass": "_dog_10",
+    "weight": "80 кг",
+    "type": 3,
+    "subtype": 4
+  }
 ]
