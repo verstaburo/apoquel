@@ -117,7 +117,6 @@ export default function slider() {
       slidesPerView: 1,
       spaceBetween: 0,
       simulateTouch: false,
-      autoHeight: true,
       roundLengths: true,
       init: false,
       allowTouchMove: false,
