@@ -39,6 +39,13 @@ export default function faq() {
     heads.css({
       top: card.offset().top + card.outerHeight(),
     });
+
+    const target = heads;
+    if (target.length > 0) {
+      $('body, html').stop().animate({
+        scrollTop: target.offset().top - $('.header').outerHeight() - 12,
+      }, 500, 'swing');
+    }
   });
 
   // Скрываем попап при клике вне него
