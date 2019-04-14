@@ -9,6 +9,11 @@
  * Так же доступа к блокам, которые собираются с помощью вебпака не будет.
  */
 
+$(window).on('load', function () {
+  window.scrollTo(window.scrollX, window.scrollY - 1);
+  window.scrollTo(window.scrollX, window.scrollY + 1);
+});
+
 $(function () {
 
   function shopPage() {
