@@ -20,6 +20,7 @@
       height: 428px;
       position: relative;
       overflow: hidden;
+      width: 100% !important;
 
       img {
         height: 100%;
@@ -35,8 +36,12 @@
         height: 360px;
       }
 
+      @include screen('md') {
+        height: 320px;
+      }
+
       @include screen('sm') {
-        height: 148px;
+        height: 140px;
       }
     }
   }

@@ -13,6 +13,10 @@ export default function slider() {
   // Слайдер статей
   $('.js-banners-slider').each(function () {
     const slider = new Swiper($(this), {
+      autoplay: {
+        delay: 3000,
+      },
+      loop: true,
       speed: 700,
       slidesPerView: 1,
       spaceBetween: 0,
